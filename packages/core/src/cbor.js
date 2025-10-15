@@ -1,4 +1,4 @@
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 import * as CBOR from '@ipld/dag-cbor'
 export { code, name, decode } from '@ipld/dag-cbor'
 import { sha256 } from 'multiformats/hashes/sha2'

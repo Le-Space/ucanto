@@ -5,7 +5,7 @@ export const test = it
 export { assert }
 
 /**
- * @template {import('@ucanto/interface').Result} Result
+ * @template {import('@le-space/ucanto-interface').Result} Result
  * @param {Result} result
  * @param {RegExp} pattern
  * @param {string} [message]
@@ -14,7 +14,7 @@ export const matchError = (result, pattern, message) =>
   assert.match(`${result.error}`, pattern, message)
 
 /**
- * @template {import('@ucanto/interface').Result} Result
+ * @template {import('@le-space/ucanto-interface').Result} Result
  * @param {Result} result
  * @param {RegExp|Result} expect
  * @param {string} [message]

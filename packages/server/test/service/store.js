@@ -1,10 +1,10 @@
 import * as Server from '../../src/server.js'
-import * as Client from '@ucanto/client'
+import * as Client from '@le-space/ucanto-client'
 import { provide } from '../../src/handler.js'
 import * as API from './api.js'
 import * as Access from './access.js'
 import { service as issuer } from '../fixtures.js'
-import { Schema } from '@ucanto/validator/src/lib.js'
+import { Schema } from '@le-space/ucanto-validator/src/lib.js'
 
 const addCapability = Server.capability({
   can: 'store/add',

@@ -1,7 +1,7 @@
-import * as API from '@ucanto/interface'
-import { Verifier } from '@ucanto/principal'
-export { capability, URI, Link, Failure } from '@ucanto/validator'
-import { Receipt, Message, fail } from '@ucanto/core'
+import * as API from '@le-space/ucanto-interface'
+import { Verifier } from '@le-space/ucanto-principal'
+export { capability, URI, Link, Failure } from '@le-space/ucanto-validator'
+import { Receipt, Message, fail } from '@le-space/ucanto-core'
 import {
   HandlerExecutionError,
   HandlerNotFound,

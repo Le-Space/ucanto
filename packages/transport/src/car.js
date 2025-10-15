@@ -1,4 +1,4 @@
-import { CAR } from '@ucanto/core'
+import { CAR } from '@le-space/ucanto-core'
 import * as request from './car/request.js'
 import * as response from './car/response.js'
 import * as Codec from './codec.js'

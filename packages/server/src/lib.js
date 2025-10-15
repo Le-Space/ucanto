@@ -1,5 +1,5 @@
 export * from './api.js'
-export * from '@ucanto/core'
+export * from '@le-space/ucanto-core'
 export * from './server.js'
 export { Failure, Link, URI, ok, error } from './server.js'
 export {
@@ -9,9 +9,9 @@ export {
   Delegation,
   DID,
   Signature,
-} from '@ucanto/core'
+} from '@le-space/ucanto-core'
 
-export { access, claim, Schema } from '@ucanto/validator'
+export { access, claim, Schema } from '@le-space/ucanto-validator'
 
 export * from './handler.js'
 export * as API from './api.js'

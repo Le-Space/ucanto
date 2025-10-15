@@ -1,5 +1,5 @@
 import * as API from './api.js'
-import { access, Schema, Failure } from '@ucanto/validator'
+import { access, Schema, Failure } from '@le-space/ucanto-validator'
 
 /**
  * Function that can be used to define given capability provider. It decorates

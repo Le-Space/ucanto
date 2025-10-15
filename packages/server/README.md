@@ -1,6 +1,6 @@
-# @ucanto/server
+# @le-space/ucanto-server
 
-`@ucanto/server` provides the necessary components to build a UCAN-based RPC server. It enables services to define capabilities, validate UCANs, and process invocations securely and efficiently. This package builds on `ucanto/core` and integrates seamlessly with other `ucanto` modules.
+`@le-space/ucanto-server` provides the necessary components to build a UCAN-based RPC server. It enables services to define capabilities, validate UCANs, and process invocations securely and efficiently. This package builds on `ucanto/core` and integrates seamlessly with other `ucanto` modules.
 
 ## What It Provides
 
@@ -11,17 +11,17 @@
 
 ## How It Fits with Other Modules
 
-- [`@ucanto/core`](../core/README.md): Provides the fundamental capability execution and validation logic.
-- [`@ucanto/interface`](../interface/README.md): Defines shared type definitions and contracts.
-- [`@ucanto/transport`](../transport/README.md): Implements encoding and transport mechanisms.
-- [`@ucanto/principal`](../principal/README.md): Handles identity management and cryptographic operations.
+- [`@le-space/ucanto-core`](../core/README.md): Provides the fundamental capability execution and validation logic.
+- [`@le-space/ucanto-interface`](../interface/README.md): Defines shared type definitions and contracts.
+- [`@le-space/ucanto-transport`](../transport/README.md): Implements encoding and transport mechanisms.
+- [`@le-space/ucanto-principal`](../principal/README.md): Handles identity management and cryptographic operations.
 
 For an overview and detailed usage information, refer to the [main `ucanto` README](../../Readme.md).
 
 ## Installation
 
 ```sh
-npm install @ucanto/server
+npm install @le-space/ucanto-server
 ```
 
 ## Example Usage
@@ -29,11 +29,11 @@ npm install @ucanto/server
 ### Basic Example
 
 ```ts
-import * as Server from '@ucanto/server';
-import * as CAR from '@ucanto/transport/car';
-import * as CBOR from '@ucanto/transport/cbor';
-import { ed25519 } from '@ucanto/principal';
-import { capability, URI } from '@ucanto/core';
+import * as Server from '@le-space/ucanto-server';
+import * as CAR from '@le-space/ucanto-transport/car';
+import * as CBOR from '@le-space/ucanto-transport/cbor';
+import { ed25519 } from '@le-space/ucanto-principal';
+import { capability, URI } from '@le-space/ucanto-core';
 
 const ReadFile = capability({
   can: 'file/read',
@@ -59,12 +59,12 @@ export const createServer = () => {
 Here's a comprehensive example of building a filesystem service with UCAN capabilities:
 
 ```ts
-import * as Server from '@ucanto/server';
-import * as Client from '@ucanto/client';
-import * as CAR from '@ucanto/transport/car';
-import * as CBOR from '@ucanto/transport/cbor';
-import { ed25519 } from '@ucanto/principal';
-import { capability, URI, Link, Schema, Failure } from '@ucanto/core';
+import * as Server from '@le-space/ucanto-server';
+import * as Client from '@le-space/ucanto-client';
+import * as CAR from '@le-space/ucanto-transport/car';
+import * as CBOR from '@le-space/ucanto-transport/cbor';
+import { ed25519 } from '@le-space/ucanto-principal';
+import { capability, URI, Link, Schema, Failure } from '@le-space/ucanto-core';
 
 // 1. Define the file/link capability
 const ensureTrailingDelimiter = uri => (uri.endsWith('/') ? uri : `${uri}/`)

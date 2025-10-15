@@ -1,8 +1,8 @@
 import { test, assert } from './test.js'
 import * as CAR from '../src/car.js'
-import { delegate, invoke, Receipt, Message, UCAN } from '@ucanto/core'
+import { delegate, invoke, Receipt, Message, UCAN } from '@le-space/ucanto-core'
 import { alice, bob, service } from './fixtures.js'
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 
 test('encode / decode', async () => {
   const { message, delegation, outgoing, incoming } = await setup()

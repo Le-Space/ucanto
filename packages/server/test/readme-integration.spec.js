@@ -5,10 +5,10 @@
 import { test, assert } from './test.js'
 import { capability, URI, Link, Failure, provide, Schema, ok, fail } from '../src/lib.js'
 import * as Server from '../src/lib.js'
-import * as CAR from '@ucanto/transport/car'
-import { ed25519 } from '@ucanto/principal'
-import * as Client from '@ucanto/client'
-import { parseLink } from '@ucanto/core'
+import * as CAR from '@le-space/ucanto-transport/car'
+import { ed25519 } from '@le-space/ucanto-principal'
+import * as Client from '@le-space/ucanto-client'
+import { parseLink } from '@le-space/ucanto-core'
 
 test('README workflow integration with server-as-channel', async () => {
   // 1. Define capability (from README)

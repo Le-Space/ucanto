@@ -2,7 +2,7 @@ import { test, assert } from './test.js'
 import * as CAR from '../src/car.js'
 import * as Transport from '../src/lib.js'
 import { alice, bob } from './fixtures.js'
-import { invoke, delegate, parseLink, Receipt, Message } from '@ucanto/core'
+import { invoke, delegate, parseLink, Receipt, Message } from '@le-space/ucanto-core'
 
 test('unsupported inbound content-type', async () => {
   const accept = CAR.inbound.accept({

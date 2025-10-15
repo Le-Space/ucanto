@@ -687,7 +687,7 @@ export type InferInvocations<T extends Tuple> = T extends [
   : never
 
 /**
- * An invocation handler, as returned by {@link @ucanto/server#provide | `Server.provide` }.
+ * An invocation handler, as returned by {@link @le-space/ucanto-server#provide | `Server.provide` }.
  *
  * @typeParam I - the {@link Capability} type accepted by the handler
  * @typeParam O - type returned by the handler on success
@@ -1017,7 +1017,7 @@ export interface ServerOptions<T> extends ValidatorOptions {
  * A definition for a {@link Service}, combined with an optional
  * handler method for execution errors.
  *
- * Used as input to {@link @ucanto/server#create | `Server.create` } when
+ * Used as input to {@link @le-space/ucanto-server#create | `Server.create` } when
  * defining a service implementation.
  */
 export interface Server<T> extends ServerOptions<T> {
@@ -1030,7 +1030,7 @@ export interface Server<T> extends ServerOptions<T> {
  * transport channel. The `ServerView` has an {@link InvocationContext}
  * which contains the DID of the service itself, among other things.
  *
- * Returned by {@link @ucanto/server#create | `Server.create` } when instantiating
+ * Returned by {@link @le-space/ucanto-server#create | `Server.create` } when instantiating
  * a server.
  */
 export interface ServerView<T extends Record<string, any>>
@@ -1044,7 +1044,7 @@ export interface ServerView<T extends Record<string, any>>
 /**
  * A mapping of service names to handlers, used to define a service implementation.
  *
- * See {@link Server}, which wraps a `Service` and is used by {@link @ucanto/server/create}.
+ * See {@link Server}, which wraps a `Service` and is used by {@link @le-space/ucanto-server/create}.
  */
 export type Service = Record<
   string,
@@ -1155,7 +1155,7 @@ export interface Signer<ID extends DID = DID, Alg extends SigAlg = SigAlg>
    *
    * @example
    * ```js
-   * import * as Principal from "@ucanto/principal"
+   * import * as Principal from "@le-space/ucanto-principal"
    *
    * const { signer, verifier } = Principal.from(archive)
    * ```
@@ -1202,7 +1202,7 @@ export interface Signer<ID extends DID = DID, Alg extends SigAlg = SigAlg>
    * @example
    *
    * ```ts
-   * import { ed25519 } from "@ucanto/principal"
+   * import { ed25519 } from "@le-space/ucanto-principal"
    *
    * const demo = async () => {
    *   const key = await ed25519.generate()

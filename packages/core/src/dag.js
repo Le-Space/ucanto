@@ -1,4 +1,4 @@
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 import { create as createLink } from './link.js'
 import { sha256 } from 'multiformats/hashes/sha2'
 import * as MF from 'multiformats/interface'

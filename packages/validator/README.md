@@ -1,6 +1,6 @@
-# @ucanto/validator
+# @le-space/ucanto-validator
 
-`@ucanto/validator` provides validation mechanisms for UCAN-based capabilities, ensuring that invocations comply with defined rules and security policies.
+`@le-space/ucanto-validator` provides validation mechanisms for UCAN-based capabilities, ensuring that invocations comply with defined rules and security policies.
 
 ## What It Provides
 - **Capability Validation**: Ensures UCANs are properly formatted and authorized.
@@ -8,22 +8,22 @@
 - **Security Enforcement**: Applies validation policies to prevent unauthorized actions.
 
 ## How It Fits with Other Modules
-- [`@ucanto/core`](../core/README.md): Uses validation mechanisms to enforce capability constraints.
-- [`@ucanto/server`](../server/README.md): Ensures only valid UCANs are processed by services.
-- [`@ucanto/interface`](../interface/README.md): Defines standard validation-related types.
-- [`@ucanto/principal`](../principal/README.md): Verifies cryptographic signatures for UCAN validation.
+- [`@le-space/ucanto-core`](../core/README.md): Uses validation mechanisms to enforce capability constraints.
+- [`@le-space/ucanto-server`](../server/README.md): Ensures only valid UCANs are processed by services.
+- [`@le-space/ucanto-interface`](../interface/README.md): Defines standard validation-related types.
+- [`@le-space/ucanto-principal`](../principal/README.md): Verifies cryptographic signatures for UCAN validation.
 
 For an overview and detailed usage information, refer to the [main `ucanto` README](../../Readme.md).
 
 ## Installation
 ```sh
-npm install @ucanto/validator
+npm install @le-space/ucanto-validator
 ```
 
 ## Example Usage
 ```ts
-import { access, DID, capability, fail, Link, Schema } from '@ucanto/validator'
-import { Verifier, ed25519 } from '@ucanto/principal'
+import { access, DID, capability, fail, Link, Schema } from '@le-space/ucanto-validator'
+import { Verifier, ed25519 } from '@le-space/ucanto-principal'
 
 // Sample identities
 const alice = await ed25519.generate()

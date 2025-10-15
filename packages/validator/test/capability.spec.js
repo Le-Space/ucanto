@@ -1,6 +1,6 @@
 import { capability, URI, Link, Schema, ok, fail } from '../src/lib.js'
-import { invoke, parseLink } from '@ucanto/core'
-import * as API from '@ucanto/interface'
+import { invoke, parseLink } from '@le-space/ucanto-core'
+import * as API from '@le-space/ucanto-interface'
 import { Failure } from '../src/error.js'
 import { the } from '../src/util.js'
 import { test, assert } from './test.js'

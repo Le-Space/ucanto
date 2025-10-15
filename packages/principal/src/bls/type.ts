@@ -6,10 +6,10 @@ import {
   DIDKey,
   SignatureView,
   Await,
-} from '@ucanto/interface'
+} from '@le-space/ucanto-interface'
 import * as Signature from '@ipld/dag-ucan/signature'
 
-export * from '@ucanto/interface'
+export * from '@le-space/ucanto-interface'
 
 /**
  * Integer corresponding to BLS12381G2 byteprefix of the VarSig.

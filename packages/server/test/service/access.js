@@ -1,6 +1,6 @@
 import * as Server from '../../src/server.js'
 import { provide } from '../../src/handler.js'
-import { DID, Schema } from '@ucanto/validator'
+import { DID, Schema } from '@le-space/ucanto-validator'
 import * as API from './api.js'
 import { service as w3 } from '../fixtures.js'
 export const id = w3

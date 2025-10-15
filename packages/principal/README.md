@@ -1,6 +1,6 @@
-# @ucanto/principal
+# @le-space/ucanto-principal
 
-`@ucanto/principal` provides identity management and cryptographic utilities for UCAN-based authentication and authorization. It enables secure key generation, signing, and verification of UCANs.
+`@le-space/ucanto-principal` provides identity management and cryptographic utilities for UCAN-based authentication and authorization. It enables secure key generation, signing, and verification of UCANs.
 
 ## What It Provides
 - **Key Management**: Supports cryptographic key generation and handling.
@@ -8,21 +8,21 @@
 - **Identity Handling**: Manages decentralized identifiers (DIDs) for secure communication.
 
 ## How It Fits with Other Modules
-- [`@ucanto/core`](../core/README.md): Uses principal identities for capability execution.
-- [`@ucanto/server`](../server/README.md): Relies on identity verification for secure RPC handling.
-- [`@ucanto/interface`](../interface/README.md): Defines standard identity-related types.
-- [`@ucanto/transport`](../transport/README.md): Ensures encrypted and authenticated communication.
+- [`@le-space/ucanto-core`](../core/README.md): Uses principal identities for capability execution.
+- [`@le-space/ucanto-server`](../server/README.md): Relies on identity verification for secure RPC handling.
+- [`@le-space/ucanto-interface`](../interface/README.md): Defines standard identity-related types.
+- [`@le-space/ucanto-transport`](../transport/README.md): Ensures encrypted and authenticated communication.
 
 For an overview and detailed usage information, refer to the [main `ucanto` README](../../Readme.md).
 
 ## Installation
 ```sh
-npm install @ucanto/principal
+npm install @le-space/ucanto-principal
 ```
 
 ## Example Usage
 ```ts
-import { ed25519 } from '@ucanto/principal';
+import { ed25519 } from '@le-space/ucanto-principal';
 
 const keypair = ed25519.generate();
 const signature = keypair.sign(new Uint8Array([1, 2, 3]));

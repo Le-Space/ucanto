@@ -4,10 +4,10 @@ import {
   MulticodecCode,
   ByteView,
   DIDKey,
-} from '@ucanto/interface'
+} from '@le-space/ucanto-interface'
 import * as Signature from '@ipld/dag-ucan/signature'
 
-export * from '@ucanto/interface'
+export * from '@le-space/ucanto-interface'
 
 /**
  * Integer corresponding to EdDSA byteprefix of the VarSig.

@@ -1,4 +1,4 @@
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 import { Verifier, Signer, ed25519, RSA } from '../src/lib.js'
 import { assert } from 'chai'
 

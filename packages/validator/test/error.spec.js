@@ -1,5 +1,5 @@
 import { test, assert } from './test.js'
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 import {
   Failure,
   PrincipalAlignmentError,
@@ -8,7 +8,7 @@ import {
   NotValidBefore,
 } from '../src/error.js'
 import { alice, bob, mallory, service as w3 } from './fixtures.js'
-import { delegate, UCAN } from '@ucanto/core'
+import { delegate, UCAN } from '@le-space/ucanto-core'
 
 test('Failure', () => {
   const error = new Failure('boom!')

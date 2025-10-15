@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * P-256 (ES256) Usage Examples for @ucanto/principal
+ * P-256 (ES256) Usage Examples for @le-space/ucanto-principal
  * 
  * This file demonstrates how to use P-256 ECDSA signatures with ucanto,
  * including key generation, signing, verification, and UCAN integration.
@@ -11,7 +11,7 @@ import { P256 } from '../src/lib.js'
 import * as Core from '../../core/src/lib.js'
 import * as Client from '../../client/src/lib.js'
 
-console.log('🎯 P-256 (ES256) Examples for @ucanto/principal')
+console.log('🎯 P-256 (ES256) Examples for @le-space/ucanto-principal')
 console.log('=' .repeat(60))
 
 // Example 1: Basic Key Generation and Information

@@ -47,11 +47,11 @@
 
 ### ⚠ BREAKING CHANGES
 
-* update `@ucanto/interface` dependencies ([#310](https://github.com/web3-storage/ucanto/issues/310))
+* update `@le-space/ucanto-interface` dependencies ([#310](https://github.com/web3-storage/ucanto/issues/310))
 
 ### Features
 
-* update `@ucanto/interface` dependencies ([#310](https://github.com/web3-storage/ucanto/issues/310)) ([3d1adbf](https://github.com/web3-storage/ucanto/commit/3d1adbf0011db1a1d602040bbdc84b1e3721f62c))
+* update `@le-space/ucanto-interface` dependencies ([#310](https://github.com/web3-storage/ucanto/issues/310)) ([3d1adbf](https://github.com/web3-storage/ucanto/commit/3d1adbf0011db1a1d602040bbdc84b1e3721f62c))
 
 ## [7.0.3](https://github.com/web3-storage/ucanto/compare/transport-v7.0.2...transport-v7.0.3) (2023-04-26)
 
@@ -372,10 +372,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^4.1.0 to ^4.2.3
-    * @ucanto/interface bumped from ^4.1.0 to ^4.2.3
+    * @le-space/ucanto-core bumped from ^4.1.0 to ^4.2.3
+    * @le-space/ucanto-interface bumped from ^4.1.0 to ^4.2.3
   * devDependencies
-    * @ucanto/principal bumped from ^4.1.0 to ^4.2.3
+    * @le-space/ucanto-principal bumped from ^4.1.0 to ^4.2.3
 
 ## [4.1.0](https://www.github.com/web3-storage/ucanto/compare/transport-v4.0.3...transport-v4.1.0) (2023-01-24)
 
@@ -397,10 +397,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^4.0.3 to ^4.1.0
-    * @ucanto/interface bumped from ^4.0.3 to ^4.1.0
+    * @le-space/ucanto-core bumped from ^4.0.3 to ^4.1.0
+    * @le-space/ucanto-interface bumped from ^4.0.3 to ^4.1.0
   * devDependencies
-    * @ucanto/principal bumped from ^4.0.3 to ^4.1.0
+    * @le-space/ucanto-principal bumped from ^4.0.3 to ^4.1.0
 
 ### [4.0.3](https://www.github.com/web3-storage/ucanto/compare/transport-v4.0.2...transport-v4.0.3) (2022-12-14)
 
@@ -414,10 +414,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^4.0.2 to ^4.0.3
-    * @ucanto/interface bumped from ^4.0.2 to ^4.0.3
+    * @le-space/ucanto-core bumped from ^4.0.2 to ^4.0.3
+    * @le-space/ucanto-interface bumped from ^4.0.2 to ^4.0.3
   * devDependencies
-    * @ucanto/principal bumped from ^4.0.2 to ^4.0.3
+    * @le-space/ucanto-principal bumped from ^4.0.2 to ^4.0.3
 
 ## [4.0.2](https://github.com/web3-storage/ucanto/compare/transport-v4.0.3...transport-v4.0.2) (2022-12-14)
 
@@ -464,10 +464,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^4.0.3 to ^4.0.2
-    * @ucanto/interface bumped from ^4.1.0 to ^4.0.2
+    * @le-space/ucanto-core bumped from ^4.0.3 to ^4.0.2
+    * @le-space/ucanto-interface bumped from ^4.1.0 to ^4.0.2
   * devDependencies
-    * @ucanto/principal bumped from ^4.1.0 to ^4.0.2
+    * @le-space/ucanto-principal bumped from ^4.1.0 to ^4.0.2
 
 ## [4.0.2](https://github.com/web3-storage/ucanto/compare/transport-v4.0.3...transport-v4.0.2) (2022-12-14)
 
@@ -514,10 +514,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^4.0.3 to ^4.0.2
-    * @ucanto/interface bumped from ^4.1.0 to ^4.0.2
+    * @le-space/ucanto-core bumped from ^4.0.3 to ^4.0.2
+    * @le-space/ucanto-interface bumped from ^4.1.0 to ^4.0.2
   * devDependencies
-    * @ucanto/principal bumped from ^4.1.0 to ^4.0.2
+    * @le-space/ucanto-principal bumped from ^4.1.0 to ^4.0.2
 
 ## [4.0.2](https://github.com/web3-storage/ucanto/compare/transport-v4.0.2...transport-v4.0.2) (2022-12-02)
 
@@ -569,10 +569,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^4.0.0 to ^4.0.2
-    * @ucanto/interface bumped from ^4.0.0 to ^4.0.2
+    * @le-space/ucanto-core bumped from ^4.0.0 to ^4.0.2
+    * @le-space/ucanto-interface bumped from ^4.0.0 to ^4.0.2
   * devDependencies
-    * @ucanto/principal bumped from ^4.0.1 to ^4.0.2
+    * @le-space/ucanto-principal bumped from ^4.0.1 to ^4.0.2
 
 ### [3.0.5](https://www.github.com/web3-storage/ucanto/compare/transport-v3.0.4...transport-v3.0.5) (2022-12-02)
 
@@ -586,7 +586,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^3.0.4 to ^3.0.5
+    * @le-space/ucanto-core bumped from ^3.0.4 to ^3.0.5
 
 ### [3.0.4](https://www.github.com/web3-storage/ucanto/compare/transport-v3.0.3...transport-v3.0.4) (2022-12-02)
 
@@ -595,9 +595,9 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^3.0.3 to ^3.0.4
+    * @le-space/ucanto-core bumped from ^3.0.3 to ^3.0.4
   * devDependencies
-    * @ucanto/principal bumped from ^4.0.0 to ^4.0.1
+    * @le-space/ucanto-principal bumped from ^4.0.0 to ^4.0.1
 
 ### [3.0.3](https://www.github.com/web3-storage/ucanto/compare/transport-v3.0.2...transport-v3.0.3) (2022-12-01)
 
@@ -606,10 +606,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^3.0.2 to ^3.0.3
-    * @ucanto/interface bumped from ^3.0.1 to ^4.0.0
+    * @le-space/ucanto-core bumped from ^3.0.2 to ^3.0.3
+    * @le-space/ucanto-interface bumped from ^3.0.1 to ^4.0.0
   * devDependencies
-    * @ucanto/principal bumped from ^3.0.1 to ^4.0.0
+    * @le-space/ucanto-principal bumped from ^3.0.1 to ^4.0.0
 
 ### [3.0.2](https://www.github.com/web3-storage/ucanto/compare/transport-v3.0.1...transport-v3.0.2) (2022-11-11)
 
@@ -623,10 +623,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^3.0.1 to ^3.0.2
-    * @ucanto/interface bumped from ^3.0.0 to ^3.0.1
+    * @le-space/ucanto-core bumped from ^3.0.1 to ^3.0.2
+    * @le-space/ucanto-interface bumped from ^3.0.0 to ^3.0.1
   * devDependencies
-    * @ucanto/principal bumped from ^3.0.0 to ^3.0.1
+    * @le-space/ucanto-principal bumped from ^3.0.0 to ^3.0.1
 
 ### [3.0.1](https://www.github.com/web3-storage/ucanto/compare/transport-v3.0.0...transport-v3.0.1) (2022-11-02)
 
@@ -640,7 +640,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^3.0.0 to ^3.0.1
+    * @le-space/ucanto-core bumped from ^3.0.0 to ^3.0.1
 
 ## [3.0.0](https://www.github.com/web3-storage/ucanto/compare/transport-v2.0.0...transport-v3.0.0) (2022-10-20)
 
@@ -658,10 +658,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^2.0.0 to ^3.0.0
-    * @ucanto/interface bumped from ^2.0.0 to ^3.0.0
+    * @le-space/ucanto-core bumped from ^2.0.0 to ^3.0.0
+    * @le-space/ucanto-interface bumped from ^2.0.0 to ^3.0.0
   * devDependencies
-    * @ucanto/principal bumped from ^2.0.0 to ^3.0.0
+    * @le-space/ucanto-principal bumped from ^2.0.0 to ^3.0.0
 
 ## [2.0.0](https://www.github.com/web3-storage/ucanto/compare/transport-v1.0.1...transport-v2.0.0) (2022-10-16)
 
@@ -684,10 +684,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^1.0.1 to ^2.0.0
-    * @ucanto/interface bumped from ^1.0.0 to ^2.0.0
+    * @le-space/ucanto-core bumped from ^1.0.1 to ^2.0.0
+    * @le-space/ucanto-interface bumped from ^1.0.0 to ^2.0.0
   * devDependencies
-    * @ucanto/principal bumped from ^1.0.1 to ^2.0.0
+    * @le-space/ucanto-principal bumped from ^1.0.1 to ^2.0.0
 
 ### [1.0.1](https://www.github.com/web3-storage/ucanto/compare/transport-v1.0.0...transport-v1.0.1) (2022-09-21)
 
@@ -696,9 +696,9 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^1.0.0 to ^1.0.1
+    * @le-space/ucanto-core bumped from ^1.0.0 to ^1.0.1
   * devDependencies
-    * @ucanto/principal bumped from ^1.0.0 to ^1.0.1
+    * @le-space/ucanto-principal bumped from ^1.0.0 to ^1.0.1
 
 ## [1.0.0](https://www.github.com/web3-storage/ucanto/compare/transport-v0.7.0...transport-v1.0.0) (2022-09-14)
 
@@ -721,10 +721,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^0.6.0 to ^1.0.0
-    * @ucanto/interface bumped from ^0.7.0 to ^1.0.0
+    * @le-space/ucanto-core bumped from ^0.6.0 to ^1.0.0
+    * @le-space/ucanto-interface bumped from ^0.7.0 to ^1.0.0
   * devDependencies
-    * @ucanto/principal bumped from ^0.5.0 to ^1.0.0
+    * @le-space/ucanto-principal bumped from ^0.5.0 to ^1.0.0
 
 ## [0.7.0](https://www.github.com/web3-storage/ucanto/compare/transport-v0.6.3...transport-v0.7.0) (2022-07-28)
 
@@ -738,10 +738,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^0.5.4 to ^0.6.0
-    * @ucanto/interface bumped from ^0.6.2 to ^0.7.0
+    * @le-space/ucanto-core bumped from ^0.5.4 to ^0.6.0
+    * @le-space/ucanto-interface bumped from ^0.6.2 to ^0.7.0
   * devDependencies
-    * @ucanto/authority bumped from ^0.4.5 to ^0.5.0
+    * @le-space/ucanto-authority bumped from ^0.4.5 to ^0.5.0
 
 ### [0.6.3](https://www.github.com/web3-storage/ucanto/compare/transport-v0.6.2...transport-v0.6.3) (2022-07-11)
 
@@ -750,9 +750,9 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^0.5.3 to ^0.5.4
+    * @le-space/ucanto-core bumped from ^0.5.3 to ^0.5.4
   * devDependencies
-    * @ucanto/authority bumped from ^0.4.4 to ^0.4.5
+    * @le-space/ucanto-authority bumped from ^0.4.4 to ^0.4.5
 
 ### [0.6.2](https://www.github.com/web3-storage/ucanto/compare/transport-v0.6.1...transport-v0.6.2) (2022-07-01)
 
@@ -761,10 +761,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^0.6.1 to ^0.6.2
-    * @ucanto/core bumped from ^0.5.2 to ^0.5.3
+    * @le-space/ucanto-interface bumped from ^0.6.1 to ^0.6.2
+    * @le-space/ucanto-core bumped from ^0.5.2 to ^0.5.3
   * devDependencies
-    * @ucanto/authority bumped from ^0.4.3 to ^0.4.4
+    * @le-space/ucanto-authority bumped from ^0.4.3 to ^0.4.4
 
 ### [0.6.1](https://www.github.com/web3-storage/ucanto/compare/transport-v0.6.0...transport-v0.6.1) (2022-06-30)
 
@@ -778,10 +778,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^0.6.0 to ^0.6.1
-    * @ucanto/core bumped from ^0.5.1 to ^0.5.2
+    * @le-space/ucanto-interface bumped from ^0.6.0 to ^0.6.1
+    * @le-space/ucanto-core bumped from ^0.5.1 to ^0.5.2
   * devDependencies
-    * @ucanto/authority bumped from ^0.4.2 to ^0.4.3
+    * @le-space/ucanto-authority bumped from ^0.4.2 to ^0.4.3
 
 ## [0.6.0](https://www.github.com/web3-storage/ucanto/compare/transport-v0.5.0...transport-v0.6.0) (2022-06-24)
 
@@ -795,10 +795,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^0.5.0 to ^0.6.0
-    * @ucanto/core bumped from ^0.5.0 to ^0.5.1
+    * @le-space/ucanto-interface bumped from ^0.5.0 to ^0.6.0
+    * @le-space/ucanto-core bumped from ^0.5.0 to ^0.5.1
   * devDependencies
-    * @ucanto/authority bumped from ^0.4.1 to ^0.4.2
+    * @le-space/ucanto-authority bumped from ^0.4.1 to ^0.4.2
 
 ## [0.5.0](https://www.github.com/web3-storage/ucanto/compare/transport-v0.4.0...transport-v0.5.0) (2022-06-23)
 
@@ -812,10 +812,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^0.4.0 to ^0.5.0
-    * @ucanto/core bumped from ^0.4.0 to ^0.5.0
+    * @le-space/ucanto-interface bumped from ^0.4.0 to ^0.5.0
+    * @le-space/ucanto-core bumped from ^0.4.0 to ^0.5.0
   * devDependencies
-    * @ucanto/authority bumped from ^0.4.0 to ^0.4.1
+    * @le-space/ucanto-authority bumped from ^0.4.0 to ^0.4.1
 
 ## [0.4.0](https://www.github.com/web3-storage/ucanto/compare/transport-v0.3.0...transport-v0.4.0) (2022-06-20)
 
@@ -830,10 +830,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^0.3.0 to ^0.4.0
-    * @ucanto/core bumped from ^0.3.0 to ^0.4.0
+    * @le-space/ucanto-interface bumped from ^0.3.0 to ^0.4.0
+    * @le-space/ucanto-core bumped from ^0.3.0 to ^0.4.0
   * devDependencies
-    * @ucanto/authority bumped from ^0.3.0 to ^0.4.0
+    * @le-space/ucanto-authority bumped from ^0.3.0 to ^0.4.0
 
 ## [0.3.0](https://www.github.com/web3-storage/ucanto/compare/transport-v0.2.0...transport-v0.3.0) (2022-06-15)
 
@@ -847,10 +847,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^0.2.0 to ^0.3.0
-    * @ucanto/core bumped from ^0.2.0 to ^0.3.0
+    * @le-space/ucanto-interface bumped from ^0.2.0 to ^0.3.0
+    * @le-space/ucanto-core bumped from ^0.2.0 to ^0.3.0
   * devDependencies
-    * @ucanto/authority bumped from ^0.2.0 to ^0.3.0
+    * @le-space/ucanto-authority bumped from ^0.2.0 to ^0.3.0
 
 ## [0.2.0](https://www.github.com/web3-storage/ucanto/compare/transport-v0.1.0...transport-v0.2.0) (2022-06-10)
 
@@ -865,7 +865,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from 0.0.1 to ^0.2.0
-    * @ucanto/core bumped from 0.0.1 to ^0.2.0
+    * @le-space/ucanto-interface bumped from 0.0.1 to ^0.2.0
+    * @le-space/ucanto-core bumped from 0.0.1 to ^0.2.0
   * devDependencies
-    * @ucanto/authority bumped from 0.0.1 to ^0.2.0
+    * @le-space/ucanto-authority bumped from 0.0.1 to ^0.2.0

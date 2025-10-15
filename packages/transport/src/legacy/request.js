@@ -1,6 +1,6 @@
-import * as CAR from '@ucanto/core/car'
-import * as API from '@ucanto/interface'
-import { Invocation, Message } from '@ucanto/core'
+import * as CAR from '@le-space/ucanto-core/car'
+import * as API from '@le-space/ucanto-interface'
+import { Invocation, Message } from '@le-space/ucanto-core'
 
 export const contentType = 'application/car'
 

@@ -1,6 +1,6 @@
-import * as API from '@ucanto/interface'
-import { isLink } from '@ucanto/core'
-import { fail, Failure } from '@ucanto/core/result'
+import * as API from '@le-space/ucanto-interface'
+import { isLink } from '@le-space/ucanto-core'
+import { fail, Failure } from '@le-space/ucanto-core/result'
 
 export { Failure, fail }
 

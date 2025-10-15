@@ -1,12 +1,12 @@
 /**
  * P-256 Quick Start Examples
  * 
- * Essential P-256 usage patterns for @ucanto/principal
+ * Essential P-256 usage patterns for @le-space/ucanto-principal
  */
 
-import { P256 } from '@ucanto/principal'
-import * as Client from '@ucanto/client'
-import * as Core from '@ucanto/core'
+import { P256 } from '@le-space/ucanto-principal'
+import * as Client from '@le-space/ucanto-client'
+import * as Core from '@le-space/ucanto-core'
 
 // Basic P-256 key generation and usage
 export async function quickStart() {

@@ -1,9 +1,9 @@
 import { test, assert, matchError } from './test.js'
 import { access, claim, DID } from '../src/lib.js'
 import { capability, fail, URI, Link, Schema } from '../src/lib.js'
-import { ed25519, Verifier } from '@ucanto/principal'
-import * as Client from '@ucanto/client'
-import * as Core from '@ucanto/core'
+import { ed25519, Verifier } from '@le-space/ucanto-principal'
+import * as Client from '@le-space/ucanto-client'
+import * as Core from '@le-space/ucanto-core'
 
 import { alice, bob, mallory, service } from './fixtures.js'
 const w3 = service.withDID('did:web:web3.storage')

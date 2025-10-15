@@ -1,4 +1,4 @@
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 import * as DID from '@ipld/dag-ucan/did'
 import * as Invocation from './invocation.js'
 import * as Delegation from './delegation.js'

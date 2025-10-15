@@ -1,6 +1,6 @@
-# @ucanto/interface
+# @le-space/ucanto-interface
 
-`@ucanto/interface` provides shared type definitions and contracts used across the `ucanto` ecosystem. It ensures consistent and type-safe interactions between different modules, facilitating seamless integration.
+`@le-space/ucanto-interface` provides shared type definitions and contracts used across the `ucanto` ecosystem. It ensures consistent and type-safe interactions between different modules, facilitating seamless integration.
 
 ## What It Provides
 - **Shared Type Definitions**: Standardized types for capabilities, invocations, and responses.
@@ -8,22 +8,22 @@
 - **Type Safety**: Enhances reliability through TypeScript-based type checking.
 
 ## How It Fits with Other Modules
-- [`@ucanto/core`](../core/README.md): Uses the interfaces to define and execute capabilities.
-- [`@ucanto/server`](../server/README.md): Implements service logic based on interface definitions.
-- [`@ucanto/transport`](../transport/README.md): Adopts standardized encoding and transport interfaces.
-- [`@ucanto/principal`](../principal/README.md): Uses identity-related interfaces for cryptographic operations.
-- [`@ucanto/client`](../client/README.md): Ensures consistent request and response structures.
+- [`@le-space/ucanto-core`](../core/README.md): Uses the interfaces to define and execute capabilities.
+- [`@le-space/ucanto-server`](../server/README.md): Implements service logic based on interface definitions.
+- [`@le-space/ucanto-transport`](../transport/README.md): Adopts standardized encoding and transport interfaces.
+- [`@le-space/ucanto-principal`](../principal/README.md): Uses identity-related interfaces for cryptographic operations.
+- [`@le-space/ucanto-client`](../client/README.md): Ensures consistent request and response structures.
 
 For an overview and detailed usage information, refer to the [main `ucanto` README](../../Readme.md).
 
 ## Installation
 ```sh
-npm install @ucanto/interface
+npm install @le-space/ucanto-interface
 ```
 
 ## Example Usage
 ```ts
-import { Capability, Invocation } from '@ucanto/interface';
+import { Capability, Invocation } from '@le-space/ucanto-interface';
 
 const exampleCapability: Capability = {
   can: 'file/read',

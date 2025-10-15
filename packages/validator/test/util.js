@@ -1,6 +1,6 @@
 import { Failure } from '../src/error.js'
-import { ok, fail } from '@ucanto/core'
-import * as API from '@ucanto/interface'
+import { ok, fail } from '@le-space/ucanto-core'
+import * as API from '@le-space/ucanto-interface'
 
 /**
  * @template T

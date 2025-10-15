@@ -1,6 +1,6 @@
-import * as API from '@ucanto/interface'
-import { Failure } from '@ucanto/core'
-export { MalformedCapability } from '@ucanto/validator'
+import * as API from '@le-space/ucanto-interface'
+import { Failure } from '@le-space/ucanto-core'
+export { MalformedCapability } from '@le-space/ucanto-validator'
 
 /**
  * @implements {API.HandlerNotFound}

@@ -1,5 +1,5 @@
-import * as API from '@ucanto/interface'
-import { CAR, Message } from '@ucanto/core'
+import * as API from '@le-space/ucanto-interface'
+import { CAR, Message } from '@le-space/ucanto-core'
 export { CAR as codec }
 
 export const contentType = CAR.contentType

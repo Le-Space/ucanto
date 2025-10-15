@@ -1,4 +1,4 @@
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 
 /**
  * Creates the success result containing given `value`. Throws if

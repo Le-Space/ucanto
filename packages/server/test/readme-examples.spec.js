@@ -5,7 +5,7 @@
 
 import { test, assert } from './test.js'
 import { capability, URI, Link, Failure, provide, Schema, ok, fail } from '../src/lib.js'
-import { ed25519 } from '@ucanto/principal'
+import { ed25519 } from '@le-space/ucanto-principal'
 
 // Test that we can create the README capability definition
 test('README capability definition works', async () => {

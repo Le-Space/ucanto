@@ -1,19 +1,19 @@
-import * as Client from '@ucanto/client'
+import * as Client from '@le-space/ucanto-client'
 import * as Server from '../src/server.js'
 import * as Provider from '../src/handler.js'
-import * as CAR from '@ucanto/transport/car'
-import * as API from '@ucanto/interface'
+import * as CAR from '@le-space/ucanto-transport/car'
+import * as API from '@le-space/ucanto-interface'
 import { alice, bob, mallory, service } from './fixtures.js'
 import { test, assert } from './test.js'
 import * as Access from './service/access.js'
-import { Verifier } from '@ucanto/principal/ed25519'
+import { Verifier } from '@le-space/ucanto-principal/ed25519'
 import {
   Schema,
   UnavailableProof,
   Unauthorized,
   Revoked,
-} from '@ucanto/validator'
-import { Absentee } from '@ucanto/principal'
+} from '@le-space/ucanto-validator'
+import { Absentee } from '@le-space/ucanto-principal'
 import { capability } from '../src/server.js'
 import { isLink, parseLink, fail, Invocation } from '../src/lib.js'
 

@@ -1,4 +1,4 @@
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 import { CarBufferReader } from '@ipld/car/buffer-reader'
 import * as CarBufferWriter from '@ipld/car/buffer-writer'
 import { base32 } from 'multiformats/bases/base32'

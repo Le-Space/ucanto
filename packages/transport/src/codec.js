@@ -1,4 +1,4 @@
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 
 /**
  * @typedef {`${Lowercase<string>}/${Lowercase<string>}`|`${Lowercase<string>}/${Lowercase<string>}+${Lowercase<string>}`} ContentType

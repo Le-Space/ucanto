@@ -61,11 +61,11 @@
 
 ### ⚠ BREAKING CHANGES
 
-* update `@ucanto/interface` dependencies ([#310](https://github.com/web3-storage/ucanto/issues/310))
+* update `@le-space/ucanto-interface` dependencies ([#310](https://github.com/web3-storage/ucanto/issues/310))
 
 ### Features
 
-* update `@ucanto/interface` dependencies ([#310](https://github.com/web3-storage/ucanto/issues/310)) ([3d1adbf](https://github.com/web3-storage/ucanto/commit/3d1adbf0011db1a1d602040bbdc84b1e3721f62c))
+* update `@le-space/ucanto-interface` dependencies ([#310](https://github.com/web3-storage/ucanto/issues/310)) ([3d1adbf](https://github.com/web3-storage/ucanto/commit/3d1adbf0011db1a1d602040bbdc84b1e3721f62c))
 
 ## [7.0.0](https://github.com/web3-storage/ucanto/compare/validator-v0.7.0...validator-v7.0.0) (2023-04-11)
 
@@ -194,7 +194,7 @@
 
 ### Bug Fixes
 
-* add [@returns](https://www.github.com/returns) to @ucanto/validator Schema.dictionary() to avoid problematic inference when using derives ([#215](https://www.github.com/web3-storage/ucanto/issues/215)) ([620421d](https://www.github.com/web3-storage/ucanto/commit/620421d450a82d165301ae8d0ebad1ec041db636))
+* add [@returns](https://www.github.com/returns) to @le-space/ucanto-validator Schema.dictionary() to avoid problematic inference when using derives ([#215](https://www.github.com/web3-storage/ucanto/issues/215)) ([620421d](https://www.github.com/web3-storage/ucanto/commit/620421d450a82d165301ae8d0ebad1ec041db636))
 
 
 ### Miscellaneous Chores
@@ -206,11 +206,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^4.1.0 to ^4.2.3
-    * @ucanto/interface bumped from ^4.1.0 to ^4.2.3
+    * @le-space/ucanto-core bumped from ^4.1.0 to ^4.2.3
+    * @le-space/ucanto-interface bumped from ^4.1.0 to ^4.2.3
   * devDependencies
-    * @ucanto/client bumped from ^4.1.0 to ^4.2.3
-    * @ucanto/principal bumped from ^4.1.0 to ^4.2.3
+    * @le-space/ucanto-client bumped from ^4.1.0 to ^4.2.3
+    * @le-space/ucanto-principal bumped from ^4.1.0 to ^4.2.3
 
 ## [4.1.0](https://www.github.com/web3-storage/ucanto/compare/validator-v4.0.3...validator-v4.1.0) (2023-01-24)
 
@@ -243,11 +243,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^4.0.3 to ^4.1.0
-    * @ucanto/interface bumped from ^4.0.3 to ^4.1.0
+    * @le-space/ucanto-core bumped from ^4.0.3 to ^4.1.0
+    * @le-space/ucanto-interface bumped from ^4.0.3 to ^4.1.0
   * devDependencies
-    * @ucanto/client bumped from ^4.0.3 to ^4.1.0
-    * @ucanto/principal bumped from ^4.0.3 to ^4.1.0
+    * @le-space/ucanto-client bumped from ^4.0.3 to ^4.1.0
+    * @le-space/ucanto-principal bumped from ^4.0.3 to ^4.1.0
 
 ### [4.0.3](https://www.github.com/web3-storage/ucanto/compare/validator-v4.0.2...validator-v4.0.3) (2022-12-14)
 
@@ -261,11 +261,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^4.0.2 to ^4.0.3
-    * @ucanto/interface bumped from ^4.0.2 to ^4.0.3
+    * @le-space/ucanto-core bumped from ^4.0.2 to ^4.0.3
+    * @le-space/ucanto-interface bumped from ^4.0.2 to ^4.0.3
   * devDependencies
-    * @ucanto/client bumped from ^4.0.2 to ^4.0.3
-    * @ucanto/principal bumped from ^4.0.2 to ^4.0.3
+    * @le-space/ucanto-client bumped from ^4.0.2 to ^4.0.3
+    * @le-space/ucanto-principal bumped from ^4.0.2 to ^4.0.3
 
 ## [4.0.2](https://github.com/web3-storage/ucanto/compare/validator-v4.1.0...validator-v4.0.2) (2022-12-14)
 
@@ -319,11 +319,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^4.0.3 to ^4.0.2
-    * @ucanto/interface bumped from ^4.1.0 to ^4.0.2
+    * @le-space/ucanto-core bumped from ^4.0.3 to ^4.0.2
+    * @le-space/ucanto-interface bumped from ^4.1.0 to ^4.0.2
   * devDependencies
-    * @ucanto/client bumped from ^4.0.3 to ^4.0.2
-    * @ucanto/principal bumped from ^4.1.0 to ^4.0.2
+    * @le-space/ucanto-client bumped from ^4.0.3 to ^4.0.2
+    * @le-space/ucanto-principal bumped from ^4.1.0 to ^4.0.2
 
 ## [4.1.0](https://github.com/web3-storage/ucanto/compare/validator-v4.0.2...validator-v4.1.0) (2022-12-14)
 
@@ -337,11 +337,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^4.0.2 to ^4.0.3
-    * @ucanto/interface bumped from ^4.0.2 to ^4.1.0
+    * @le-space/ucanto-core bumped from ^4.0.2 to ^4.0.3
+    * @le-space/ucanto-interface bumped from ^4.0.2 to ^4.1.0
   * devDependencies
-    * @ucanto/client bumped from ^4.0.2 to ^4.0.3
-    * @ucanto/principal bumped from ^4.0.2 to ^4.1.0
+    * @le-space/ucanto-client bumped from ^4.0.2 to ^4.0.3
+    * @le-space/ucanto-principal bumped from ^4.0.2 to ^4.1.0
 
 ## [4.0.2](https://github.com/web3-storage/ucanto/compare/validator-v4.1.0...validator-v4.0.2) (2022-12-14)
 
@@ -396,11 +396,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^4.0.3 to ^4.0.2
-    * @ucanto/interface bumped from ^4.1.0 to ^4.0.2
+    * @le-space/ucanto-core bumped from ^4.0.3 to ^4.0.2
+    * @le-space/ucanto-interface bumped from ^4.1.0 to ^4.0.2
   * devDependencies
-    * @ucanto/client bumped from ^4.0.3 to ^4.0.2
-    * @ucanto/principal bumped from ^4.1.0 to ^4.0.2
+    * @le-space/ucanto-client bumped from ^4.0.3 to ^4.0.2
+    * @le-space/ucanto-principal bumped from ^4.1.0 to ^4.0.2
 
 ## [4.1.0](https://github.com/web3-storage/ucanto/compare/validator-v4.0.2...validator-v4.1.0) (2022-12-14)
 
@@ -414,11 +414,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^4.0.2 to ^4.0.3
-    * @ucanto/interface bumped from ^4.0.2 to ^4.1.0
+    * @le-space/ucanto-core bumped from ^4.0.2 to ^4.0.3
+    * @le-space/ucanto-interface bumped from ^4.0.2 to ^4.1.0
   * devDependencies
-    * @ucanto/client bumped from ^4.0.2 to ^4.0.3
-    * @ucanto/principal bumped from ^4.0.2 to ^4.1.0
+    * @le-space/ucanto-client bumped from ^4.0.2 to ^4.0.3
+    * @le-space/ucanto-principal bumped from ^4.0.2 to ^4.1.0
 
 ## [4.0.2](https://github.com/web3-storage/ucanto/compare/validator-v4.0.2...validator-v4.0.2) (2022-12-02)
 
@@ -482,11 +482,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^4.0.0 to ^4.0.2
-    * @ucanto/interface bumped from ^4.0.0 to ^4.0.2
+    * @le-space/ucanto-core bumped from ^4.0.0 to ^4.0.2
+    * @le-space/ucanto-interface bumped from ^4.0.0 to ^4.0.2
   * devDependencies
-    * @ucanto/client bumped from ^4.0.0 to ^4.0.2
-    * @ucanto/principal bumped from ^4.0.1 to ^4.0.2
+    * @le-space/ucanto-client bumped from ^4.0.0 to ^4.0.2
+    * @le-space/ucanto-principal bumped from ^4.0.1 to ^4.0.2
 
 ### [3.0.7](https://www.github.com/web3-storage/ucanto/compare/validator-v3.0.6...validator-v3.0.7) (2022-12-02)
 
@@ -500,9 +500,9 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^3.0.4 to ^3.0.5
+    * @le-space/ucanto-core bumped from ^3.0.4 to ^3.0.5
   * devDependencies
-    * @ucanto/client bumped from ^3.0.4 to ^3.0.5
+    * @le-space/ucanto-client bumped from ^3.0.4 to ^3.0.5
 
 ### [3.0.6](https://www.github.com/web3-storage/ucanto/compare/validator-v3.0.5...validator-v3.0.6) (2022-12-02)
 
@@ -511,10 +511,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^3.0.3 to ^3.0.4
+    * @le-space/ucanto-core bumped from ^3.0.3 to ^3.0.4
   * devDependencies
-    * @ucanto/client bumped from ^3.0.3 to ^3.0.4
-    * @ucanto/principal bumped from ^4.0.0 to ^4.0.1
+    * @le-space/ucanto-client bumped from ^3.0.3 to ^3.0.4
+    * @le-space/ucanto-principal bumped from ^4.0.0 to ^4.0.1
 
 ### [3.0.5](https://www.github.com/web3-storage/ucanto/compare/validator-v3.0.4...validator-v3.0.5) (2022-12-01)
 
@@ -523,11 +523,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^3.0.2 to ^3.0.3
-    * @ucanto/interface bumped from ^3.0.1 to ^4.0.0
+    * @le-space/ucanto-core bumped from ^3.0.2 to ^3.0.3
+    * @le-space/ucanto-interface bumped from ^3.0.1 to ^4.0.0
   * devDependencies
-    * @ucanto/client bumped from ^3.0.2 to ^3.0.3
-    * @ucanto/principal bumped from ^3.0.1 to ^4.0.0
+    * @le-space/ucanto-client bumped from ^3.0.2 to ^3.0.3
+    * @le-space/ucanto-principal bumped from ^3.0.1 to ^4.0.0
 
 ### [3.0.4](https://www.github.com/web3-storage/ucanto/compare/validator-v3.0.3...validator-v3.0.4) (2022-11-12)
 
@@ -555,11 +555,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^3.0.1 to ^3.0.2
-    * @ucanto/interface bumped from ^3.0.0 to ^3.0.1
+    * @le-space/ucanto-core bumped from ^3.0.1 to ^3.0.2
+    * @le-space/ucanto-interface bumped from ^3.0.0 to ^3.0.1
   * devDependencies
-    * @ucanto/client bumped from ^3.0.1 to ^3.0.2
-    * @ucanto/principal bumped from ^3.0.0 to ^3.0.1
+    * @le-space/ucanto-client bumped from ^3.0.1 to ^3.0.2
+    * @le-space/ucanto-principal bumped from ^3.0.0 to ^3.0.1
 
 ### [3.0.1](https://www.github.com/web3-storage/ucanto/compare/validator-v3.0.0...validator-v3.0.1) (2022-11-02)
 
@@ -573,9 +573,9 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^3.0.0 to ^3.0.1
+    * @le-space/ucanto-core bumped from ^3.0.0 to ^3.0.1
   * devDependencies
-    * @ucanto/client bumped from ^3.0.0 to ^3.0.1
+    * @le-space/ucanto-client bumped from ^3.0.0 to ^3.0.1
 
 ## [3.0.0](https://www.github.com/web3-storage/ucanto/compare/validator-v2.0.0...validator-v3.0.0) (2022-10-20)
 
@@ -593,11 +593,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^2.0.0 to ^3.0.0
-    * @ucanto/interface bumped from ^2.0.0 to ^3.0.0
+    * @le-space/ucanto-core bumped from ^2.0.0 to ^3.0.0
+    * @le-space/ucanto-interface bumped from ^2.0.0 to ^3.0.0
   * devDependencies
-    * @ucanto/principal bumped from ^2.0.0 to ^3.0.0
-    * @ucanto/client bumped from ^2.0.0 to ^3.0.0
+    * @le-space/ucanto-principal bumped from ^2.0.0 to ^3.0.0
+    * @le-space/ucanto-client bumped from ^2.0.0 to ^3.0.0
 
 ## [2.0.0](https://www.github.com/web3-storage/ucanto/compare/validator-v1.0.1...validator-v2.0.0) (2022-10-16)
 
@@ -625,11 +625,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^1.0.1 to ^2.0.0
-    * @ucanto/interface bumped from ^1.0.0 to ^2.0.0
+    * @le-space/ucanto-core bumped from ^1.0.1 to ^2.0.0
+    * @le-space/ucanto-interface bumped from ^1.0.0 to ^2.0.0
   * devDependencies
-    * @ucanto/principal bumped from ^1.0.1 to ^2.0.0
-    * @ucanto/client bumped from ^1.0.1 to ^2.0.0
+    * @le-space/ucanto-principal bumped from ^1.0.1 to ^2.0.0
+    * @le-space/ucanto-client bumped from ^1.0.1 to ^2.0.0
 
 ### [1.0.1](https://www.github.com/web3-storage/ucanto/compare/validator-v1.0.0...validator-v1.0.1) (2022-09-21)
 
@@ -638,10 +638,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^1.0.0 to ^1.0.1
+    * @le-space/ucanto-core bumped from ^1.0.0 to ^1.0.1
   * devDependencies
-    * @ucanto/principal bumped from ^1.0.0 to ^1.0.1
-    * @ucanto/client bumped from ^1.0.0 to ^1.0.1
+    * @le-space/ucanto-principal bumped from ^1.0.0 to ^1.0.1
+    * @le-space/ucanto-client bumped from ^1.0.0 to ^1.0.1
 
 ## [1.0.0](https://www.github.com/web3-storage/ucanto/compare/validator-v0.6.0...validator-v1.0.0) (2022-09-14)
 
@@ -659,11 +659,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^0.6.0 to ^1.0.0
-    * @ucanto/interface bumped from ^0.7.0 to ^1.0.0
+    * @le-space/ucanto-core bumped from ^0.6.0 to ^1.0.0
+    * @le-space/ucanto-interface bumped from ^0.7.0 to ^1.0.0
   * devDependencies
-    * @ucanto/principal bumped from ^0.5.0 to ^1.0.0
-    * @ucanto/client bumped from ^0.6.0 to ^1.0.0
+    * @le-space/ucanto-principal bumped from ^0.5.0 to ^1.0.0
+    * @le-space/ucanto-client bumped from ^0.6.0 to ^1.0.0
 
 ## [0.6.0](https://www.github.com/web3-storage/ucanto/compare/validator-v0.5.5...validator-v0.6.0) (2022-07-28)
 
@@ -677,11 +677,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^0.5.4 to ^0.6.0
-    * @ucanto/interface bumped from ^0.6.2 to ^0.7.0
+    * @le-space/ucanto-core bumped from ^0.5.4 to ^0.6.0
+    * @le-space/ucanto-interface bumped from ^0.6.2 to ^0.7.0
   * devDependencies
-    * @ucanto/authority bumped from ^0.4.5 to ^0.5.0
-    * @ucanto/client bumped from ^0.5.4 to ^0.6.0
+    * @le-space/ucanto-authority bumped from ^0.4.5 to ^0.5.0
+    * @le-space/ucanto-client bumped from ^0.5.4 to ^0.6.0
 
 ### [0.5.5](https://www.github.com/web3-storage/ucanto/compare/validator-v0.5.4...validator-v0.5.5) (2022-07-11)
 
@@ -690,10 +690,10 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^0.5.3 to ^0.5.4
+    * @le-space/ucanto-core bumped from ^0.5.3 to ^0.5.4
   * devDependencies
-    * @ucanto/client bumped from ^0.5.3 to ^0.5.4
-    * @ucanto/authority bumped from ^0.4.4 to ^0.4.5
+    * @le-space/ucanto-client bumped from ^0.5.3 to ^0.5.4
+    * @le-space/ucanto-authority bumped from ^0.4.4 to ^0.4.5
 
 ### [0.5.4](https://www.github.com/web3-storage/ucanto/compare/validator-v0.5.3...validator-v0.5.4) (2022-07-01)
 
@@ -702,7 +702,7 @@
 
 * The following workspace dependencies were updated
   * devDependencies
-    * @ucanto/client bumped from ^0.5.2 to ^0.5.3
+    * @le-space/ucanto-client bumped from ^0.5.2 to ^0.5.3
 
 ### [0.5.3](https://www.github.com/web3-storage/ucanto/compare/validator-v0.5.2...validator-v0.5.3) (2022-07-01)
 
@@ -711,11 +711,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^0.5.2 to ^0.5.3
-    * @ucanto/interface bumped from ^0.6.1 to ^0.6.2
+    * @le-space/ucanto-core bumped from ^0.5.2 to ^0.5.3
+    * @le-space/ucanto-interface bumped from ^0.6.1 to ^0.6.2
   * devDependencies
-    * @ucanto/client bumped from ^0.5.1 to ^0.5.2
-    * @ucanto/authority bumped from ^0.4.3 to ^0.4.4
+    * @le-space/ucanto-client bumped from ^0.5.1 to ^0.5.2
+    * @le-space/ucanto-authority bumped from ^0.4.3 to ^0.4.4
 
 ### [0.5.2](https://www.github.com/web3-storage/ucanto/compare/validator-v0.5.1...validator-v0.5.2) (2022-06-30)
 
@@ -729,11 +729,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^0.5.1 to ^0.5.2
-    * @ucanto/interface bumped from ^0.6.0 to ^0.6.1
+    * @le-space/ucanto-core bumped from ^0.5.1 to ^0.5.2
+    * @le-space/ucanto-interface bumped from ^0.6.0 to ^0.6.1
   * devDependencies
-    * @ucanto/client bumped from ^0.5.0 to ^0.5.1
-    * @ucanto/authority bumped from ^0.4.2 to ^0.4.3
+    * @le-space/ucanto-client bumped from ^0.5.0 to ^0.5.1
+    * @le-space/ucanto-authority bumped from ^0.4.2 to ^0.4.3
 
 ### [0.5.1](https://www.github.com/web3-storage/ucanto/compare/validator-v0.5.0...validator-v0.5.1) (2022-06-24)
 
@@ -742,11 +742,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^0.5.0 to ^0.5.1
-    * @ucanto/interface bumped from ^0.5.0 to ^0.6.0
+    * @le-space/ucanto-core bumped from ^0.5.0 to ^0.5.1
+    * @le-space/ucanto-interface bumped from ^0.5.0 to ^0.6.0
   * devDependencies
-    * @ucanto/client bumped from ^0.4.0 to ^0.5.0
-    * @ucanto/authority bumped from ^0.4.1 to ^0.4.2
+    * @le-space/ucanto-client bumped from ^0.4.0 to ^0.5.0
+    * @le-space/ucanto-authority bumped from ^0.4.1 to ^0.4.2
 
 ## [0.5.0](https://www.github.com/web3-storage/ucanto/compare/validator-v0.4.0...validator-v0.5.0) (2022-06-23)
 
@@ -761,11 +761,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^0.4.0 to ^0.5.0
-    * @ucanto/interface bumped from ^0.4.0 to ^0.5.0
+    * @le-space/ucanto-core bumped from ^0.4.0 to ^0.5.0
+    * @le-space/ucanto-interface bumped from ^0.4.0 to ^0.5.0
   * devDependencies
-    * @ucanto/client bumped from ^0.3.0 to ^0.4.0
-    * @ucanto/authority bumped from ^0.4.0 to ^0.4.1
+    * @le-space/ucanto-client bumped from ^0.3.0 to ^0.4.0
+    * @le-space/ucanto-authority bumped from ^0.4.0 to ^0.4.1
 
 ## [0.4.0](https://www.github.com/web3-storage/ucanto/compare/validator-v0.3.0...validator-v0.4.0) (2022-06-20)
 
@@ -780,11 +780,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^0.3.0 to ^0.4.0
-    * @ucanto/interface bumped from ^0.3.0 to ^0.4.0
+    * @le-space/ucanto-core bumped from ^0.3.0 to ^0.4.0
+    * @le-space/ucanto-interface bumped from ^0.3.0 to ^0.4.0
   * devDependencies
-    * @ucanto/client bumped from ^0.2.2 to ^0.3.0
-    * @ucanto/authority bumped from ^0.3.0 to ^0.4.0
+    * @le-space/ucanto-client bumped from ^0.2.2 to ^0.3.0
+    * @le-space/ucanto-authority bumped from ^0.3.0 to ^0.4.0
 
 ## [0.3.0](https://www.github.com/web3-storage/ucanto/compare/validator-v0.2.0...validator-v0.3.0) (2022-06-15)
 
@@ -798,11 +798,11 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^0.2.0 to ^0.3.0
-    * @ucanto/interface bumped from ^0.2.0 to ^0.3.0
+    * @le-space/ucanto-core bumped from ^0.2.0 to ^0.3.0
+    * @le-space/ucanto-interface bumped from ^0.2.0 to ^0.3.0
   * devDependencies
-    * @ucanto/client bumped from ^0.2.0 to ^0.2.2
-    * @ucanto/authority bumped from ^0.2.0 to ^0.3.0
+    * @le-space/ucanto-client bumped from ^0.2.0 to ^0.2.2
+    * @le-space/ucanto-authority bumped from ^0.2.0 to ^0.3.0
 
 ## [0.2.0](https://www.github.com/web3-storage/ucanto/compare/validator-v0.1.0...validator-v0.2.0) (2022-06-10)
 
@@ -817,8 +817,8 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/core bumped from ^0.0.1 to ^0.2.0
-    * @ucanto/interface bumped from ^0.0.1 to ^0.2.0
+    * @le-space/ucanto-core bumped from ^0.0.1 to ^0.2.0
+    * @le-space/ucanto-interface bumped from ^0.0.1 to ^0.2.0
   * devDependencies
-    * @ucanto/client bumped from ^0.0.1 to ^0.2.0
-    * @ucanto/authority bumped from 0.0.1 to ^0.2.0
+    * @le-space/ucanto-client bumped from ^0.0.1 to ^0.2.0
+    * @le-space/ucanto-authority bumped from 0.0.1 to ^0.2.0

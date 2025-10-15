@@ -1,7 +1,7 @@
-import * as API from '@ucanto/interface'
-import { isDelegation, ok, fail, UCAN } from '@ucanto/core'
+import * as API from '@le-space/ucanto-interface'
+import { isDelegation, ok, fail, UCAN } from '@le-space/ucanto-core'
 import { capability } from './capability.js'
-import * as Schema from '@ucanto/core/schema'
+import * as Schema from '@le-space/ucanto-core/schema'
 import * as Authorization from './authorization.js'
 import {
   UnavailableProof,
@@ -19,7 +19,7 @@ import {
 } from './error.js'
 
 export { capability } from './capability.js'
-export * from '@ucanto/core/schema'
+export * from '@le-space/ucanto-core/schema'
 
 export {
   Schema,

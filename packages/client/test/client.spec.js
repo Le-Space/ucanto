@@ -1,9 +1,9 @@
 import { test, assert } from './test.js'
 import * as Client from '../src/lib.js'
-import * as HTTP from '@ucanto/transport/http'
-import { CAR, Codec } from '@ucanto/transport'
+import * as HTTP from '@le-space/ucanto-transport/http'
+import { CAR, Codec } from '@le-space/ucanto-transport'
 import * as Service from './service.js'
-import { Receipt, Message, CBOR } from '@ucanto/core'
+import { Receipt, Message, CBOR } from '@le-space/ucanto-core'
 import { alice, bob, mallory, service as w3 } from './fixtures.js'
 import fetch from '@web-std/fetch'
 

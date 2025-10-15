@@ -33,11 +33,11 @@
 
 ### ⚠ BREAKING CHANGES
 
-* update `@ucanto/interface` dependencies ([#310](https://github.com/web3-storage/ucanto/issues/310))
+* update `@le-space/ucanto-interface` dependencies ([#310](https://github.com/web3-storage/ucanto/issues/310))
 
 ### Features
 
-* update `@ucanto/interface` dependencies ([#310](https://github.com/web3-storage/ucanto/issues/310)) ([3d1adbf](https://github.com/web3-storage/ucanto/commit/3d1adbf0011db1a1d602040bbdc84b1e3721f62c))
+* update `@le-space/ucanto-interface` dependencies ([#310](https://github.com/web3-storage/ucanto/issues/310)) ([3d1adbf](https://github.com/web3-storage/ucanto/commit/3d1adbf0011db1a1d602040bbdc84b1e3721f62c))
 
 ## [7.0.0](https://github.com/web3-storage/ucanto/compare/principal-v0.7.0...principal-v7.0.0) (2023-04-11)
 
@@ -156,7 +156,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^4.1.0 to ^4.2.3
+    * @le-space/ucanto-interface bumped from ^4.1.0 to ^4.2.3
 
 ## [4.1.0](https://www.github.com/web3-storage/ucanto/compare/principal-v4.0.3...principal-v4.1.0) (2023-01-24)
 
@@ -187,7 +187,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^4.0.3 to ^4.1.0
+    * @le-space/ucanto-interface bumped from ^4.0.3 to ^4.1.0
 
 ### [4.0.3](https://www.github.com/web3-storage/ucanto/compare/principal-v4.0.2...principal-v4.0.3) (2022-12-14)
 
@@ -201,7 +201,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^4.0.2 to ^4.0.3
+    * @le-space/ucanto-interface bumped from ^4.0.2 to ^4.0.3
 
 ## [4.0.2](https://github.com/web3-storage/ucanto/compare/principal-v4.1.0...principal-v4.0.2) (2022-12-14)
 
@@ -242,7 +242,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^4.1.0 to ^4.0.2
+    * @le-space/ucanto-interface bumped from ^4.1.0 to ^4.0.2
 
 ## [4.1.0](https://github.com/web3-storage/ucanto/compare/principal-v4.0.2...principal-v4.1.0) (2022-12-14)
 
@@ -256,7 +256,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^4.0.2 to ^4.1.0
+    * @le-space/ucanto-interface bumped from ^4.0.2 to ^4.1.0
 
 ## [4.0.2](https://github.com/web3-storage/ucanto/compare/principal-v4.1.0...principal-v4.0.2) (2022-12-14)
 
@@ -298,7 +298,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^4.1.0 to ^4.0.2
+    * @le-space/ucanto-interface bumped from ^4.1.0 to ^4.0.2
 
 ## [4.1.0](https://github.com/web3-storage/ucanto/compare/principal-v4.0.2...principal-v4.1.0) (2022-12-14)
 
@@ -312,7 +312,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^4.0.2 to ^4.1.0
+    * @le-space/ucanto-interface bumped from ^4.0.2 to ^4.1.0
 
 ## [4.0.2](https://github.com/web3-storage/ucanto/compare/principal-v4.0.2...principal-v4.0.2) (2022-12-02)
 
@@ -364,7 +364,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^4.0.0 to ^4.0.2
+    * @le-space/ucanto-interface bumped from ^4.0.0 to ^4.0.2
 
 ### [4.0.1](https://www.github.com/web3-storage/ucanto/compare/principal-v4.0.0...principal-v4.0.1) (2022-12-02)
 
@@ -389,7 +389,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^3.0.1 to ^4.0.0
+    * @le-space/ucanto-interface bumped from ^3.0.1 to ^4.0.0
 
 ### [3.0.1](https://www.github.com/web3-storage/ucanto/compare/principal-v3.0.0...principal-v3.0.1) (2022-11-11)
 
@@ -403,7 +403,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^3.0.0 to ^3.0.1
+    * @le-space/ucanto-interface bumped from ^3.0.0 to ^3.0.1
 
 ## [3.0.0](https://www.github.com/web3-storage/ucanto/compare/principal-v2.0.0...principal-v3.0.0) (2022-10-20)
 
@@ -421,7 +421,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^2.0.0 to ^3.0.0
+    * @le-space/ucanto-interface bumped from ^2.0.0 to ^3.0.0
 
 ## [2.0.0](https://www.github.com/web3-storage/ucanto/compare/principal-v1.0.1...principal-v2.0.0) (2022-10-16)
 
@@ -442,7 +442,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^1.0.0 to ^2.0.0
+    * @le-space/ucanto-interface bumped from ^1.0.0 to ^2.0.0
 
 ### [1.0.1](https://www.github.com/web3-storage/ucanto/compare/principal-v1.0.0...principal-v1.0.1) (2022-09-21)
 
@@ -467,7 +467,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^0.7.0 to ^1.0.0
+    * @le-space/ucanto-interface bumped from ^0.7.0 to ^1.0.0
 
 ## [0.5.0](https://www.github.com/web3-storage/ucanto/compare/authority-v0.4.5...authority-v0.5.0) (2022-07-28)
 
@@ -481,7 +481,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^0.6.2 to ^0.7.0
+    * @le-space/ucanto-interface bumped from ^0.6.2 to ^0.7.0
 
 ### [0.4.5](https://www.github.com/web3-storage/ucanto/compare/authority-v0.4.4...authority-v0.4.5) (2022-07-11)
 
@@ -497,7 +497,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^0.6.1 to ^0.6.2
+    * @le-space/ucanto-interface bumped from ^0.6.1 to ^0.6.2
 
 ### [0.4.3](https://www.github.com/web3-storage/ucanto/compare/authority-v0.4.2...authority-v0.4.3) (2022-06-30)
 
@@ -511,7 +511,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^0.6.0 to ^0.6.1
+    * @le-space/ucanto-interface bumped from ^0.6.0 to ^0.6.1
 
 ### [0.4.2](https://www.github.com/web3-storage/ucanto/compare/authority-v0.4.1...authority-v0.4.2) (2022-06-24)
 
@@ -520,7 +520,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^0.5.0 to ^0.6.0
+    * @le-space/ucanto-interface bumped from ^0.5.0 to ^0.6.0
 
 ### [0.4.1](https://www.github.com/web3-storage/ucanto/compare/authority-v0.4.0...authority-v0.4.1) (2022-06-23)
 
@@ -529,7 +529,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^0.4.0 to ^0.5.0
+    * @le-space/ucanto-interface bumped from ^0.4.0 to ^0.5.0
 
 ## [0.4.0](https://www.github.com/web3-storage/ucanto/compare/authority-v0.3.0...authority-v0.4.0) (2022-06-20)
 
@@ -544,7 +544,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^0.3.0 to ^0.4.0
+    * @le-space/ucanto-interface bumped from ^0.3.0 to ^0.4.0
 
 ## [0.3.0](https://www.github.com/web3-storage/ucanto/compare/authority-v0.2.0...authority-v0.3.0) (2022-06-15)
 
@@ -558,7 +558,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from ^0.2.0 to ^0.3.0
+    * @le-space/ucanto-interface bumped from ^0.2.0 to ^0.3.0
 
 ## [0.2.0](https://www.github.com/web3-storage/ucanto/compare/authority-v0.1.0...authority-v0.2.0) (2022-06-10)
 
@@ -572,7 +572,7 @@
 
 * The following workspace dependencies were updated
   * dependencies
-    * @ucanto/interface bumped from 0.0.1 to ^0.2.0
+    * @le-space/ucanto-interface bumped from 0.0.1 to ^0.2.0
 
 ## 1.0.0 (2022-06-09)
 

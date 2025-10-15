@@ -27,16 +27,16 @@ Most developers will use ucanto to **connect to existing UCAN services**. Here's
 ### Installation
 
 ```sh
-npm install @ucanto/client @ucanto/principal @ucanto/transport
+npm install @le-space/ucanto-client @le-space/ucanto-principal @le-space/ucanto-transport
 ```
 
 ### Basic Usage
 
 ```ts
-import * as Client from '@ucanto/client'
-import * as HTTP from '@ucanto/transport/http'
-import { CAR } from '@ucanto/transport'
-import { ed25519 } from '@ucanto/principal'
+import * as Client from '@le-space/ucanto-client'
+import * as HTTP from '@le-space/ucanto-transport/http'
+import { CAR } from '@le-space/ucanto-transport'
+import { ed25519 } from '@le-space/ucanto-principal'
 
 // Connect to a UCAN service (e.g., w3up, your company's API, etc.)
 const connection = Client.connect({
@@ -216,7 +216,7 @@ Different UCAN services will have different capabilities. Check their documentat
 
 ## Building Your Own Service
 
-To create your own UCAN service, see the **[@ucanto/server documentation](./packages/server/README.md)**. This covers:
+To create your own UCAN service, see the **[@le-space/ucanto-server documentation](./packages/server/README.md)**. This covers:
 
 - Defining capabilities
 - Creating service handlers  
@@ -228,7 +228,7 @@ To create your own UCAN service, see the **[@ucanto/server documentation](./pack
 ### Custom Transport
 
 ```ts
-import * as Transport from '@ucanto/transport'
+import * as Transport from '@le-space/ucanto-transport'
 
 const connection = Client.connect({
   id: service,
@@ -243,7 +243,7 @@ const connection = Client.connect({
 ### Key Management
 
 ```ts
-import { ed25519 } from '@ucanto/principal'
+import { ed25519 } from '@le-space/ucanto-principal'
 
 // Generate new keys
 const agent = await ed25519.generate()
@@ -267,12 +267,12 @@ const loadedAgent = ed25519.parse(keyData)
 
 ## Package Overview
 
-- [`@ucanto/client`](./packages/client/README.md) - Connect to and invoke UCAN services
-- [`@ucanto/server`](./packages/server/README.md) - Build your own UCAN services  
-- [`@ucanto/transport`](./packages/transport/README.md) - Transport layer implementations
-- [`@ucanto/principal`](./packages/principal/README.md) - Cryptographic identity management
-- [`@ucanto/core`](./packages/core/README.md) - Core UCAN primitives
-- [`@ucanto/validator`](./packages/validator/README.md) - UCAN validation logic
+- [`@le-space/ucanto-client`](./packages/client/README.md) - Connect to and invoke UCAN services
+- [`@le-space/ucanto-server`](./packages/server/README.md) - Build your own UCAN services  
+- [`@le-space/ucanto-transport`](./packages/transport/README.md) - Transport layer implementations
+- [`@le-space/ucanto-principal`](./packages/principal/README.md) - Cryptographic identity management
+- [`@le-space/ucanto-core`](./packages/core/README.md) - Core UCAN primitives
+- [`@le-space/ucanto-validator`](./packages/validator/README.md) - UCAN validation logic
 
 [ucan]: https://github.com/ucan-wg/spec/
 [rpc]: https://en.wikipedia.org/wiki/Remote_procedure_call

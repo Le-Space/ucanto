@@ -1,5 +1,5 @@
 import * as UCAN from '@ipld/dag-ucan'
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 import * as Link from './link.js'
 import * as DAG from './dag.js'
 import * as CAR from './car.js'

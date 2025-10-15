@@ -1,4 +1,4 @@
-export * as API from '@ucanto/interface'
+export * as API from '@le-space/ucanto-interface'
 export * as Delegation from './delegation.js'
 export * as Invocation from './invocation.js'
 export * as Message from './message.js'
