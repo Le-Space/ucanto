@@ -29,13 +29,13 @@
     "build": "tsc --build"
   },
   "dependencies": {
-    "@le-space/ucanto-core": "workspace:^",
-    "@le-space/ucanto-interface": "workspace:^"
+    "@le-space/ucanto-core": "^10.5.0",
+    "@le-space/ucanto-interface": "^11.1.0"
   },
   "devDependencies": {
     "@types/chai": "^4.3.3",
     "@types/mocha": "^10.0.1",
-    "@le-space/ucanto-principal": "workspace:^",
+    "@le-space/ucanto-principal": "^9.1.0",
     "@web-std/fetch": "^4.1.0",
     "c8": "^7.13.0",
     "chai": "^4.3.6",
