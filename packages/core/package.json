@@ -32,13 +32,13 @@
     "@ipld/car": "^5.1.0",
     "@ipld/dag-cbor": "^9.0.0",
     "@ipld/dag-ucan": "^3.4.5",
-    "@le-space/ucanto-interface": "workspace:^"
+    "@le-space/ucanto-interface": "workspace:^",
     "multiformats": "^13.3.1"
   },
   "devDependencies": {
     "@types/chai": "^4.3.3",
     "@types/mocha": "^10.0.1",
-    "@ucanto/principal": "workspace:^",
+    "@le-space/ucanto-principal": "workspace:^",
     "c8": "^7.13.0",
     "chai": "^4.3.6",
     "mocha": "^10.1.0",
