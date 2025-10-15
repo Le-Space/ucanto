@@ -1,7 +1,7 @@
 {
   "name": "@le-space/ucanto-server",
   "description": "UCAN RPC Server",
-  "version": "11.1.0",
+  "version": "11.1.1",
   "types": "./dist/src/lib.d.ts",
   "main": "./src/lib.js",
   "keywords": [
@@ -28,17 +28,17 @@
     "build": "tsc --build"
   },
   "dependencies": {
-    "@le-space/ucanto-core": "^10.5.0",
-    "@le-space/ucanto-interface": "^11.1.0",
-    "@le-space/ucanto-transport": "^9.3.0",
-    "@le-space/ucanto-validator": "^10.1.0"
+    "@le-space/ucanto-core": "^10.5.1",
+    "@le-space/ucanto-interface": "^11.1.1",
+    "@le-space/ucanto-transport": "^9.3.1",
+    "@le-space/ucanto-validator": "^10.1.1"
   },
   "devDependencies": {
     "@types/chai": "^4.3.3",
     "@types/chai-subset": "^1.3.3",
     "@types/mocha": "^10.0.1",
-    "@le-space/ucanto-client": "^9.1.0",
-    "@le-space/ucanto-principal": "^9.1.0",
+    "@le-space/ucanto-client": "^9.1.1",
+    "@le-space/ucanto-principal": "^9.1.1",
     "@web-std/fetch": "^4.1.0",
     "@web-std/file": "^3.0.2",
     "c8": "^7.13.0",

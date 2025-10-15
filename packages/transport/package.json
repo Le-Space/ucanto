@@ -1,7 +1,7 @@
 {
   "name": "@le-space/ucanto-transport",
   "description": "ucanto transport",
-  "version": "9.3.0",
+  "version": "9.3.1",
   "keywords": [
     "UCAN",
     "RPC",
@@ -29,13 +29,13 @@
     "build": "tsc --build"
   },
   "dependencies": {
-    "@le-space/ucanto-core": "^10.5.0",
-    "@le-space/ucanto-interface": "^11.1.0"
+    "@le-space/ucanto-core": "^10.5.1",
+    "@le-space/ucanto-interface": "^11.1.1"
   },
   "devDependencies": {
     "@types/chai": "^4.3.3",
     "@types/mocha": "^10.0.1",
-    "@le-space/ucanto-principal": "^9.1.0",
+    "@le-space/ucanto-principal": "^9.1.1",
     "@web-std/fetch": "^4.1.0",
     "c8": "^7.13.0",
     "chai": "^4.3.6",
