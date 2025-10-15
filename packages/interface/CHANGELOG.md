@@ -1,5 +1,13 @@
 # Changelog
 
+## [11.1.0](https://github.com/Le-Space/ucanto/compare/interface-v11.0.0...interface-v11.1.0) (2025-01-15)
+
+### Changed
+
+- migrated from @ucanto namespace to @le-space/ucanto namespace
+- updated readme and example code and tests to latest api changes
+- added P-256 principal and WebAuthN support
+
 ## [11.0.0](https://github.com/storacha/ucanto/compare/interface-v10.3.0...interface-v11.0.0) (2025-06-01)
 
 

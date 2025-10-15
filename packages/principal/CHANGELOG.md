@@ -1,5 +1,13 @@
 # Changelog
 
+## [9.1.0](https://github.com/Le-Space/ucanto/compare/principal-v9.0.2...principal-v9.1.0) (2025-01-15)
+
+### Changed
+
+- migrated from @ucanto namespace to @le-space/ucanto namespace
+- updated readme and example code and tests to latest api changes
+- added P-256 principal and WebAuthN support
+
 ## [9.0.2](https://github.com/storacha/ucanto/compare/principal-v9.0.1...principal-v9.0.2) (2025-01-22)
 
 
