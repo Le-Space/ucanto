@@ -1,7 +1,7 @@
 {
   "name": "@le-space/ucanto-client",
   "description": "UCAN RPC Client",
-  "version": "9.1.0",
+  "version": "9.1.1",
   "keywords": [
     "UCAN",
     "RPC",
