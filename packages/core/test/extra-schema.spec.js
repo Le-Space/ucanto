@@ -1,6 +1,6 @@
 import { URI, Link, Text, DID, Principal } from '../src/schema.js'
 import { test, assert, matchResult } from './test.js'
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 import * as DIDTools from '@ipld/dag-ucan/did'
 
 {

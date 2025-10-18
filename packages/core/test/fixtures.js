@@ -1,4 +1,4 @@
-import * as ed25519 from '@ucanto/principal/ed25519'
+import * as ed25519 from '@le-space/ucanto-principal/ed25519'
 
 /** did:key:z6Mkk89bC3JrVqKie71YEcc5M1SMVxuCgNx6zLZ8SYJsxALi */
 export const alice = ed25519.parse(

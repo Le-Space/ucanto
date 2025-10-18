@@ -1,4 +1,4 @@
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 import { delegate, Delegation, isDelegation } from './delegation.js'
 import * as DAG from './dag.js'
 

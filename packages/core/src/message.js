@@ -1,4 +1,4 @@
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 import * as DAG from './dag.js'
 import { Invocation, panic } from './lib.js'
 import * as Receipt from './receipt.js'

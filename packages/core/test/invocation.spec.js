@@ -50,7 +50,7 @@ test('encode invocation with attached block in capability nb', async () => {
   })
   add.attach(block)
 
-  /** @type {import('@ucanto/interface').BlockStore<unknown>} */
+  /** @type {import('@le-space/ucanto-interface').BlockStore<unknown>} */
   const blockStore = new Map()
   const view = await add.buildIPLDView()
   for (const b of view.iterateIPLDBlocks()) {
@@ -65,7 +65,7 @@ test('encode invocation with attached block in capability nb', async () => {
     blocks: blockStore,
   })
 
-  /** @type {import('@ucanto/interface').BlockStore<unknown>} */
+  /** @type {import('@le-space/ucanto-interface').BlockStore<unknown>} */
   const reassembledBlockstore = new Map()
 
   for (const b of reassembledInvocation.iterateIPLDBlocks()) {

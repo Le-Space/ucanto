@@ -1,4 +1,4 @@
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 import { create, createLegacy, isLink, parse, base32 } from '../link.js'
 import * as Schema from './schema.js'
 

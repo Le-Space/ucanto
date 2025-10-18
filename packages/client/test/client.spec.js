@@ -1,14 +1,14 @@
 import { test, assert } from './test.js'
 import * as Client from '../src/lib.js'
-import * as HTTP from '@ucanto/transport/http'
-import { CAR, Codec } from '@ucanto/transport'
+import * as HTTP from '@le-space/ucanto-transport/http'
+import { CAR, Codec } from '@le-space/ucanto-transport'
 import * as Service from './service.js'
-import { Receipt, Message, CBOR } from '@ucanto/core'
+import { Receipt, Message, CBOR } from '@le-space/ucanto-core'
 import { alice, bob, mallory, service as w3 } from './fixtures.js'
 import fetch from '@web-std/fetch'
 
 test('encode invocation', async () => {
-  /** @type {Client.ConnectionView<Service.Service>} */
+/** @type {import('@le-space/ucanto-interface').ConnectionView<Service.Service>} */
   const connection = Client.connect({
     id: w3,
     channel: HTTP.open({ url: new URL('about:blank'), fetch }),
@@ -60,7 +60,7 @@ test('encode delegated invocation', async () => {
     roots: [await CBOR.write({ hello: 'world ' })],
   })
 
-  /** @type {Client.ConnectionView<Service.Service>} */
+  /** @type {import('@le-space/ucanto-interface').ConnectionView<Service.Service>} */
   const connection = Client.connect({
     id: w3,
     channel: HTTP.open({ url: new URL('about:blank'), fetch }),
@@ -117,7 +117,7 @@ test('encode delegated invocation', async () => {
     ])
 
     assert.deepEqual(add.proofs, [proof])
-    const delegation = /** @type {Client.Delegation} */ (
+    const delegation = /** @type {import('@le-space/ucanto-interface').Delegation} */ (
       add.proofs && add.proofs[0]
     )
     assert.equal(delegation.issuer.did(), proof.issuer.did())
@@ -151,7 +151,7 @@ const channel = HTTP.open({
       switch (capability.can) {
         case 'store/add': {
           const result = await service.store.add(
-            /** @type {Client.Invocation<any>} */ (invocation)
+            /** @type {import('@le-space/ucanto-interface').Invocation<any>} */ (invocation)
           )
           return Receipt.issue({
             ran: invocation.cid,
@@ -161,7 +161,7 @@ const channel = HTTP.open({
         }
         case 'store/remove': {
           const result = await service.store.remove(
-            /** @type {Client.Invocation<any>} */ (invocation)
+            /** @type {import('@le-space/ucanto-interface').Invocation<any>} */ (invocation)
           )
           return Receipt.issue({
             ran: invocation.cid,
@@ -172,7 +172,7 @@ const channel = HTTP.open({
       }
     })
 
-    const receipts = /** @type {Client.Tuple<Client.Receipt>} */ (
+    const receipts = /** @type {import('@le-space/ucanto-interface').Tuple<import('@le-space/ucanto-interface').Receipt>} */ (
       await Promise.all(promises)
     )
 
@@ -188,7 +188,7 @@ const channel = HTTP.open({
   },
 })
 
-/** @type {Client.ConnectionView<Service.Service>} */
+/** @type {import('@le-space/ucanto-interface').ConnectionView<Service.Service>} */
 const connection = Client.connect({
   id: w3,
   channel,

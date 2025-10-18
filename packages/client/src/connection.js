@@ -1,5 +1,5 @@
-import * as API from '@ucanto/interface'
-import { Signature, Message, Receipt, sha256 } from '@ucanto/core'
+import * as API from '@le-space/ucanto-interface'
+import { Signature, Message, Receipt, sha256 } from '@le-space/ucanto-core'
 
 /**
  * Creates a connection to a service.

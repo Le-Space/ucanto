@@ -1,7 +1,7 @@
 {
   "name": "@le-space/ucanto-validator",
   "description": "UCAN RPC validators",
-  "version": "10.0.0",
+  "version": "10.1.0",
   "keywords": [
     "UCAN",
     "ed25519",
@@ -31,7 +31,7 @@
     "@ipld/car": "^5.4.0",
     "@ipld/dag-cbor": "^9.2.2",
     "@le-space/ucanto-core": "workspace:^",
-    "@le-space/ucanto-interface": "workspace:^"
+    "@le-space/ucanto-interface": "workspace:^",
     "multiformats": "^13.3.1"
   },
   "devDependencies": {
