@@ -1,7 +1,12 @@
-export * from '@ucanto/interface'
-import * as API from '@ucanto/interface'
+export * from '@le-space/ucanto-interface'
+import * as API from '@le-space/ucanto-interface'
 
-import type { DID, Link, Await, Result as SyncResult } from '@ucanto/interface'
+import type {
+  DID,
+  Link,
+  Await,
+  Result as SyncResult,
+} from '@le-space/ucanto-interface'
 export type { DID, Link, SyncResult }
 type Result<
   T extends unknown = unknown,

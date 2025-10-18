@@ -18,7 +18,8 @@ const PRIVATE_TAG_SIZE = varint.encodingLength(code)
 const PUBLIC_TAG_SIZE = varint.encodingLength(Verifier.code)
 const PRIVATE_KEY_SIZE = 32 // P-256 private key size
 const PUBLIC_KEY_SIZE = 33 // P-256 compressed public key size
-const SIZE = PRIVATE_TAG_SIZE + PRIVATE_KEY_SIZE + PUBLIC_TAG_SIZE + PUBLIC_KEY_SIZE
+const SIZE =
+  PRIVATE_TAG_SIZE + PRIVATE_KEY_SIZE + PUBLIC_TAG_SIZE + PUBLIC_KEY_SIZE
 
 export const PUB_KEY_OFFSET = PRIVATE_TAG_SIZE + PRIVATE_KEY_SIZE
 
@@ -138,7 +139,10 @@ class P256Signer extends Uint8Array {
   }
   /** @type {API.P256Verifier} */
   get verifier() {
-    const bytes = new Uint8Array(this.buffer, PRIVATE_TAG_SIZE + PRIVATE_KEY_SIZE)
+    const bytes = new Uint8Array(
+      this.buffer,
+      PRIVATE_TAG_SIZE + PRIVATE_KEY_SIZE
+    )
     const verifier = Verifier.decode(bytes)
 
     Object.defineProperties(this, {
@@ -154,7 +158,11 @@ class P256Signer extends Uint8Array {
    * Raw private key without multiformat code.
    */
   get secret() {
-    const secret = new Uint8Array(this.buffer, PRIVATE_TAG_SIZE, PRIVATE_KEY_SIZE)
+    const secret = new Uint8Array(
+      this.buffer,
+      PRIVATE_TAG_SIZE,
+      PRIVATE_KEY_SIZE
+    )
     Object.defineProperties(this, {
       secret: {
         value: secret,

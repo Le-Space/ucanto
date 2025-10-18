@@ -1,8 +1,8 @@
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 import { test, assert } from './test.js'
 import * as CAR from '../src/car.js'
 import * as Legacy from '../src/legacy.js'
-import { invoke, Receipt, Message, CBOR } from '@ucanto/core'
+import { invoke, Receipt, Message, CBOR } from '@le-space/ucanto-core'
 import { alice, bob, service } from './fixtures.js'
 
 test('Legacy decode / encode', async () => {

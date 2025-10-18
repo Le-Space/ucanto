@@ -1,4 +1,4 @@
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 import { entries, combine, intersection } from './util.js'
 import {
   EscalatedCapability,
@@ -6,7 +6,7 @@ import {
   UnknownCapability,
   DelegationError as MatchError,
 } from './error.js'
-import { invoke, delegate, Schema } from '@ucanto/core'
+import { invoke, delegate, Schema } from '@le-space/ucanto-core'
 
 /**
  * @template {API.Ability} A

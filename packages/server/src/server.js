@@ -1,7 +1,7 @@
-import * as API from '@ucanto/interface'
-import { Verifier } from '@ucanto/principal'
-export { capability, URI, Link, Failure } from '@ucanto/validator'
-import { Receipt, Message, fail } from '@ucanto/core'
+import * as API from '@le-space/ucanto-interface'
+import { Verifier } from '@le-space/ucanto-principal'
+export { capability, URI, Link, Failure } from '@le-space/ucanto-validator'
+import { Receipt, Message, fail } from '@le-space/ucanto-core'
 import {
   HandlerExecutionError,
   HandlerNotFound,
@@ -79,15 +79,18 @@ export const handle = async (server, request) => {
     }
   } else {
     const { encoder, decoder } = selection.ok
-    let message;
+    let message
     try {
       message = await decoder.decode(request)
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Unable to decode request'
+      const errorMessage =
+        err instanceof Error ? err.message : 'Unable to decode request'
       return {
         status: 400,
         headers: { 'Content-Type': 'text/plain' },
-        body: new TextEncoder().encode(`Bad request: Malformed payload - ${errorMessage}`),
+        body: new TextEncoder().encode(
+          `Bad request: Malformed payload - ${errorMessage}`
+        ),
       }
     }
     const result = await execute(message, server)

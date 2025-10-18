@@ -1,7 +1,7 @@
-import * as API from '@ucanto/interface'
-import { CanIssue, ParsedCapability } from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
+import { CanIssue, ParsedCapability } from '@le-space/ucanto-interface'
 
-export * from '@ucanto/interface'
+export * from '@le-space/ucanto-interface'
 
 export type InvocationError =
   | API.HandlerNotFound

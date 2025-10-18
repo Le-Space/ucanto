@@ -1,4 +1,4 @@
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 
 /**
  * @typedef {{
@@ -68,7 +68,10 @@ class Channel {
 
     const buffer = response.ok
       ? await response.arrayBuffer()
-      : HTTPError.throw(`HTTP Request failed. ${this.method} ${this.url.href} → ${response.status}`, response)
+      : HTTPError.throw(
+          `HTTP Request failed. ${this.method} ${this.url.href} → ${response.status}`,
+          response
+        )
 
     return {
       headers: response.headers.entries

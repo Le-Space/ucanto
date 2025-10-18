@@ -1,4 +1,4 @@
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 import { encodeSequence, readInt, encodeInt, readSequenceWith } from './asn1.js'
 import * as SPKI from './spki.js'
 import { base64url } from 'multiformats/bases/base64'

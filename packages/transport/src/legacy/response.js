@@ -1,5 +1,5 @@
-import * as API from '@ucanto/interface'
-import * as CBOR from '@ucanto/core/cbor'
+import * as API from '@le-space/ucanto-interface'
+import * as CBOR from '@le-space/ucanto-core/cbor'
 export const contentType = 'application/cbor'
 
 const HEADERS = Object.freeze({

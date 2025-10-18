@@ -1,4 +1,4 @@
-import * as API from '@ucanto/interface'
+import * as API from '@le-space/ucanto-interface'
 import { encodeSequence, readInt, readSequenceWith, encodeInt } from './asn1.js'
 import { base64url } from 'multiformats/bases/base64'
 import * as PKCS8 from './pkcs8.js'

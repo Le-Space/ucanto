@@ -85,20 +85,20 @@ class WebAuthnP256Signer {
     // Hash the payload to create WebAuthn challenge
     const payloadHash = await crypto.subtle.digest('SHA-256', payload)
     const challenge = new Uint8Array(payloadHash)
-    
+
     console.log('🔐 WebAuthn signing with payload-derived challenge')
-    
+
     // Perform WebAuthn authentication with the payload-derived challenge
     const assertion = await this.authenticateFunction(challenge)
-    
+
     if (!assertion) {
       throw new Error('WebAuthn authentication failed')
     }
-    
+
     // Extract and parse the WebAuthn signature
     const rawSignature = new Uint8Array(assertion.response.signature)
     const signatureBytes = this.parseWebAuthnSignature(rawSignature)
-    
+
     // Create WebAuthn-aware UCAN signature
     const webauthnSignature = new WebAuthnSignature(
       signatureCode,
@@ -107,10 +107,10 @@ class WebAuthnP256Signer {
         clientDataJSON: new Uint8Array(assertion.response.clientDataJSON),
         authenticatorData: new Uint8Array(assertion.response.authenticatorData),
         challenge: challenge,
-        originalPayload: payload
+        originalPayload: payload,
       }
     )
-    
+
     return webauthnSignature
   }
 
@@ -123,40 +123,42 @@ class WebAuthnP256Signer {
     if (rawSignature.length <= 64) {
       return rawSignature
     }
-    
+
     try {
       // Parse DER signature: 0x30 [total-length] 0x02 [R-length] [R] 0x02 [S-length] [S]
       let offset = 0
       if (rawSignature[offset] !== 0x30) throw new Error('Not a DER sequence')
       offset += 2 // Skip sequence header and length
-      
-      if (rawSignature[offset] !== 0x02) throw new Error('R component not found')
+
+      if (rawSignature[offset] !== 0x02)
+        throw new Error('R component not found')
       offset += 1
       const rLength = rawSignature[offset]
       offset += 1
       let r = rawSignature.slice(offset, offset + rLength)
       offset += rLength
-      
-      if (rawSignature[offset] !== 0x02) throw new Error('S component not found')
+
+      if (rawSignature[offset] !== 0x02)
+        throw new Error('S component not found')
       offset += 1
       const sLength = rawSignature[offset]
       offset += 1
       let s = rawSignature.slice(offset, offset + sLength)
-      
+
       // Remove leading zero bytes if present (DER encoding requirement)
       if (r.length > 32 && r[0] === 0x00) r = r.slice(1)
       if (s.length > 32 && s[0] === 0x00) s = s.slice(1)
-      
+
       // Create 64-byte signature (32 bytes each for r and s)
       const fullSignature = new Uint8Array(64)
       const rPadded = new Uint8Array(32)
       const sPadded = new Uint8Array(32)
       rPadded.set(r, 32 - r.length)
       sPadded.set(s, 32 - s.length)
-      
+
       fullSignature.set(rPadded, 0)
       fullSignature.set(sPadded, 32)
-      
+
       return fullSignature
     } catch (derError) {
       console.warn('DER parsing failed, using last 64 bytes:', derError)
@@ -176,7 +178,7 @@ class WebAuthnP256Signer {
   get signatureAlgorithm() {
     return signatureAlgorithm
   }
-  
+
   get signatureCode() {
     return signatureCode
   }
@@ -191,7 +193,7 @@ class WebAuthnP256Signer {
     const id = this.did()
     return {
       id,
-      keys: { [id]: this.encode() }
+      keys: { [id]: this.encode() },
     }
   }
 }
@@ -211,18 +213,18 @@ class WebAuthnSignature extends Uint8Array {
     const codeSize = varint.encodingLength(algorithmCode)
     const rawSize = varint.encodingLength(signatureBytes.byteLength)
     const totalSize = codeSize + rawSize + signatureBytes.byteLength
-    
+
     super(totalSize)
     varint.encodeTo(algorithmCode, this)
     varint.encodeTo(signatureBytes.byteLength, this, codeSize)
     this.set(signatureBytes, codeSize + rawSize)
-    
+
     // Store WebAuthn context for verification
     this.webauthnContext = webauthnContext
-    
+
     Object.defineProperties(this, {
       code: { value: algorithmCode },
-      size: { value: signatureBytes.byteLength }
+      size: { value: signatureBytes.byteLength },
     })
   }
 
@@ -234,7 +236,9 @@ class WebAuthnSignature extends Uint8Array {
 
   get size() {
     const offset = varint.encodingLength(this.code)
-    const [size] = varint.decode(new Uint8Array(this.buffer, this.byteOffset + offset))
+    const [size] = varint.decode(
+      new Uint8Array(this.buffer, this.byteOffset + offset)
+    )
     Object.defineProperties(this, { size: { value: size } })
     return size
   }
@@ -264,9 +268,9 @@ class WebAuthnSignature extends Uint8Array {
       if (this.webauthnContext) {
         return await this.verifyWebAuthn(verifier, payload)
       }
-      
+
       // Fall back to standard P-256 verification
-      if (await verifier.verify(payload, this) === true) {
+      if ((await verifier.verify(payload, this)) === true) {
         return { ok: {} }
       } else {
         throw new Error('Invalid signature')
@@ -283,27 +287,39 @@ class WebAuthnSignature extends Uint8Array {
    * @returns {Promise<{ok: {}} | {error: Error}>}
    */
   async verifyWebAuthn(verifier, payload) {
-    const context = /** @type {{clientDataJSON: Uint8Array, authenticatorData: Uint8Array, challenge: Uint8Array, originalPayload: Uint8Array}} */ (this.webauthnContext)
-    const { clientDataJSON, authenticatorData, challenge, originalPayload } = context
-    
+    const context =
+      /** @type {{clientDataJSON: Uint8Array, authenticatorData: Uint8Array, challenge: Uint8Array, originalPayload: Uint8Array}} */ (
+        this.webauthnContext
+      )
+    const { clientDataJSON, authenticatorData, challenge, originalPayload } =
+      context
+
     // Verify that the payload matches the original challenge
     const payloadHash = await crypto.subtle.digest('SHA-256', payload)
     const payloadChallenge = new Uint8Array(payloadHash)
-    
-    const challengesMatch = challenge.every((/** @type {number} */ byte, /** @type {number} */ i) => byte === payloadChallenge[i])
+
+    const challengesMatch = challenge.every(
+      (/** @type {number} */ byte, /** @type {number} */ i) =>
+        byte === payloadChallenge[i]
+    )
     if (!challengesMatch) {
-      throw new Error('Challenge mismatch - payload hash doesn\'t match WebAuthn challenge')
+      throw new Error(
+        "Challenge mismatch - payload hash doesn't match WebAuthn challenge"
+      )
     }
-    
+
     // Reconstruct what WebAuthn actually signed: authenticatorData + sha256(clientDataJSON)
     const clientDataHash = await crypto.subtle.digest('SHA-256', clientDataJSON)
     const webauthnSignedData = new Uint8Array(authenticatorData.length + 32)
     webauthnSignedData.set(authenticatorData, 0)
-    webauthnSignedData.set(new Uint8Array(clientDataHash), authenticatorData.length)
-    
+    webauthnSignedData.set(
+      new Uint8Array(clientDataHash),
+      authenticatorData.length
+    )
+
     // Verify the signature against the WebAuthn signed data
     const standardSignature = Signature.create(this.code, this.raw)
-    
+
     // Try to use the verifier if it has a verify method (for testing)
     // Otherwise fall back to direct P-256 verification
     let isValid
@@ -311,8 +327,14 @@ class WebAuthnSignature extends Uint8Array {
       // Check if this is our custom mock or the WebAuthnP256Verifier
       if (verifier.constructor.name === 'WebAuthnP256Verifier') {
         // Use direct verification to avoid recursion
-        const publicKeyBytes = this.extractPublicKeyFromDID(verifier.webauthnDid)
-        isValid = await this.verifyP256Signature(webauthnSignedData, this.raw, publicKeyBytes)
+        const publicKeyBytes = this.extractPublicKeyFromDID(
+          verifier.webauthnDid
+        )
+        isValid = await this.verifyP256Signature(
+          webauthnSignedData,
+          this.raw,
+          publicKeyBytes
+        )
       } else {
         // This is likely a mock verifier, use it directly
         isValid = await verifier.verify(webauthnSignedData, standardSignature)
@@ -320,9 +342,13 @@ class WebAuthnSignature extends Uint8Array {
     } else {
       // Fallback to direct verification
       const publicKeyBytes = this.extractPublicKeyFromDID(verifier.webauthnDid)
-      isValid = await this.verifyP256Signature(webauthnSignedData, this.raw, publicKeyBytes)
+      isValid = await this.verifyP256Signature(
+        webauthnSignedData,
+        this.raw,
+        publicKeyBytes
+      )
     }
-    
+
     if (isValid) {
       return { ok: {} }
     } else {
@@ -332,10 +358,10 @@ class WebAuthnSignature extends Uint8Array {
 
   toJSON() {
     return {
-      '/': { bytes: base64pad.encode(this) }
+      '/': { bytes: base64pad.encode(this) },
     }
   }
-  
+
   /**
    * Extract public key bytes from WebAuthn DID
    * @param {string} did
@@ -346,7 +372,7 @@ class WebAuthnSignature extends Uint8Array {
     // In real implementation, this would parse the DID and extract the public key
     return new Uint8Array(33) // Mock P-256 compressed public key
   }
-  
+
   /**
    * Verify P-256 signature directly without recursion
    * @param {Uint8Array} data
@@ -359,12 +385,12 @@ class WebAuthnSignature extends Uint8Array {
       // For testing, we'll use a simple mock verification
       // In real implementation, this would use crypto.subtle.verify
       // with P-256 algorithm and proper key import
-      
+
       // Allow external mocking for testing
       if (typeof globalThis._mockP256Verify === 'function') {
         return globalThis._mockP256Verify(data, signature, publicKey)
       }
-      
+
       return signature.length === 64 && data.length > 0
     } catch {
       return false
@@ -413,10 +439,16 @@ class WebAuthnP256Verifier {
    */
   verify(payload, signature) {
     // For WebAuthn signatures, delegate to the signature's verify method
-    if (signature && typeof signature === 'object' && 'webauthnContext' in signature) {
-      return signature.verify(this, payload).then(/** @type {function(any): boolean} */ (result) => !result.error)
+    if (
+      signature &&
+      typeof signature === 'object' &&
+      'webauthnContext' in signature
+    ) {
+      return signature
+        .verify(this, payload)
+        .then(/** @type {function(any): boolean} */ result => !result.error)
     }
-    
+
     // Standard P-256 verification would go here
     // For now, we'll assume it's valid if we get this far
     return true

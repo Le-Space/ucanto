@@ -1,6 +1,6 @@
 /**
  * WebAuthn P-256 Signer Tests
- * 
+ *
  * Tests for WebAuthn-specific P-256 signing functionality.
  * Uses mocks since WebAuthn APIs are not available in Node.js test environment.
  */
@@ -17,39 +17,39 @@ if (!globalThis.crypto) {
 
 describe('WebAuthn P-256 Signer', () => {
   const testDID = 'did:key:zDnaeSMnX2KxSx1nrQBXr4wpJHhCKxwsVvLdehZkHVnGg'
-  
+
   // Mock WebAuthn assertion response
-  const createMockAssertion = (challenge) => {
+  const createMockAssertion = challenge => {
     // Create mock signature (64 bytes for P-256)
     const mockSignature = new Uint8Array(64)
     mockSignature.fill(0x42) // Fill with test data
-    
+
     // Mock client data JSON
     const clientData = {
       type: 'webauthn.get',
       // @ts-ignore - Node.js Buffer
       challenge: Buffer.from(challenge).toString('base64url'),
       origin: 'https://example.com',
-      crossOrigin: false
+      crossOrigin: false,
     }
     const clientDataJSON = new TextEncoder().encode(JSON.stringify(clientData))
-    
+
     // Mock authenticator data (minimum 37 bytes)
     const authenticatorData = new Uint8Array(37)
     authenticatorData[32] = 0x01 // User present flag
-    
+
     return {
       response: {
         signature: mockSignature.buffer,
         clientDataJSON: clientDataJSON.buffer,
-        authenticatorData: authenticatorData.buffer
-      }
+        authenticatorData: authenticatorData.buffer,
+      },
     }
   }
 
   // Mock authenticate function
   const createMockAuthenticateFunction = (shouldFail = false) => {
-    return async (challenge) => {
+    return async challenge => {
       if (shouldFail) {
         return null
       }
@@ -60,8 +60,11 @@ describe('WebAuthn P-256 Signer', () => {
   describe('createWebAuthnSigner', () => {
     it('creates a WebAuthn signer instance', () => {
       const authenticateFunction = createMockAuthenticateFunction()
-      const signer = WebAuthnSigner.createWebAuthnSigner(testDID, authenticateFunction)
-      
+      const signer = WebAuthnSigner.createWebAuthnSigner(
+        testDID,
+        authenticateFunction
+      )
+
       assert.ok(signer)
       assert.equal(signer.did(), testDID)
     })
@@ -73,7 +76,10 @@ describe('WebAuthn P-256 Signer', () => {
 
     beforeEach(() => {
       authenticateFunction = createMockAuthenticateFunction()
-      signer = WebAuthnSigner.createWebAuthnSigner(testDID, authenticateFunction)
+      signer = WebAuthnSigner.createWebAuthnSigner(
+        testDID,
+        authenticateFunction
+      )
     })
 
     describe('properties', () => {
@@ -111,7 +117,7 @@ describe('WebAuthn P-256 Signer', () => {
       it('creates signer with different DID', () => {
         const newDID = 'did:key:zNewDID'
         const newSigner = signer.withDID(newDID)
-        
+
         assert.equal(newSigner.did(), newDID)
         assert.notEqual(newSigner, signer)
       })
@@ -121,7 +127,7 @@ describe('WebAuthn P-256 Signer', () => {
       it('signs payload using WebAuthn authentication', async () => {
         const payload = new TextEncoder().encode('test payload')
         const signature = await signer.sign(payload)
-        
+
         assert.ok(signature)
         assert.ok(signature instanceof Uint8Array)
         assert.equal(signature.algorithm, 'ES256')
@@ -131,7 +137,7 @@ describe('WebAuthn P-256 Signer', () => {
       it('includes WebAuthn context in signature', async () => {
         const payload = new TextEncoder().encode('test payload')
         const signature = await signer.sign(payload)
-        
+
         const context = signature.webauthnContext
         assert.ok(context.clientDataJSON)
         assert.ok(context.authenticatorData)
@@ -143,19 +149,19 @@ describe('WebAuthn P-256 Signer', () => {
         const payload = new TextEncoder().encode('test payload')
         const expectedHash = await crypto.subtle.digest('SHA-256', payload)
         const signature = await signer.sign(payload)
-        
+
         const context = signature.webauthnContext
         assert.deepEqual(context.challenge, new Uint8Array(expectedHash))
       })
 
       it('throws error when authentication fails', async () => {
         const failingSigner = WebAuthnSigner.createWebAuthnSigner(
-          testDID, 
+          testDID,
           createMockAuthenticateFunction(true) // Will return null
         )
-        
+
         const payload = new TextEncoder().encode('test payload')
-        
+
         try {
           await failingSigner.sign(payload)
           assert.fail('Expected to throw an error')
@@ -169,7 +175,7 @@ describe('WebAuthn P-256 Signer', () => {
       it('returns signature as-is if already 64 bytes or less', () => {
         const shortSignature = new Uint8Array(64)
         shortSignature.fill(0x42)
-        
+
         const result = signer.parseWebAuthnSignature(shortSignature)
         assert.deepEqual(result, shortSignature)
       })
@@ -178,20 +184,20 @@ describe('WebAuthn P-256 Signer', () => {
         // Create a DER-encoded signature
         const r = new Uint8Array(32).fill(0x11)
         const s = new Uint8Array(32).fill(0x22)
-        
+
         // DER format: 0x30 [total-length] 0x02 [R-length] [R] 0x02 [S-length] [S]
         const derSignature = new Uint8Array(6 + 32 + 32)
         derSignature[0] = 0x30 // SEQUENCE
-        derSignature[1] = 68    // Total length (32 + 32 + 4)
-        derSignature[2] = 0x02  // INTEGER
-        derSignature[3] = 32    // R length
+        derSignature[1] = 68 // Total length (32 + 32 + 4)
+        derSignature[2] = 0x02 // INTEGER
+        derSignature[3] = 32 // R length
         derSignature.set(r, 4)
         derSignature[36] = 0x02 // INTEGER
-        derSignature[37] = 32   // S length
+        derSignature[37] = 32 // S length
         derSignature.set(s, 38)
-        
+
         const result = signer.parseWebAuthnSignature(derSignature)
-        
+
         assert.equal(result.length, 64)
         assert.deepEqual(result.slice(0, 32), r)
         assert.deepEqual(result.slice(32, 64), s)
@@ -200,10 +206,10 @@ describe('WebAuthn P-256 Signer', () => {
       it('handles DER parsing failure gracefully', () => {
         // Invalid DER signature
         const invalidDer = new Uint8Array(70)
-        invalidDer.fill(0xFF) // Invalid format
-        
+        invalidDer.fill(0xff) // Invalid format
+
         const result = signer.parseWebAuthnSignature(invalidDer)
-        
+
         // Should return last 64 bytes
         assert.equal(result.length, 64)
         assert.deepEqual(result, invalidDer.slice(-64))
@@ -213,23 +219,23 @@ describe('WebAuthn P-256 Signer', () => {
         const r = new Uint8Array(33)
         r[0] = 0x00 // Leading zero
         r.fill(0x11, 1)
-        
+
         const s = new Uint8Array(33)
-        s[0] = 0x00 // Leading zero  
+        s[0] = 0x00 // Leading zero
         s.fill(0x22, 1)
-        
+
         const derSignature = new Uint8Array(8 + 33 + 33)
         derSignature[0] = 0x30 // SEQUENCE
-        derSignature[1] = 70   // Total length
+        derSignature[1] = 70 // Total length
         derSignature[2] = 0x02 // INTEGER
-        derSignature[3] = 33   // R length
+        derSignature[3] = 33 // R length
         derSignature.set(r, 4)
         derSignature[37] = 0x02 // INTEGER
-        derSignature[38] = 33   // S length
+        derSignature[38] = 33 // S length
         derSignature.set(s, 39)
-        
+
         const result = signer.parseWebAuthnSignature(derSignature)
-        
+
         assert.equal(result.length, 64)
         // Should have leading zeros removed but padded to 32 bytes
         const expectedR = new Uint8Array(32).fill(0x11)
@@ -243,7 +249,7 @@ describe('WebAuthn P-256 Signer', () => {
       it('delegates to verifier', async () => {
         const payload = new TextEncoder().encode('test payload')
         const signature = await signer.sign(payload)
-        
+
         // Create a non-WebAuthnP256Verifier mock to ensure delegation
         let verifyCallCount = 0
         const mockVerifier = {
@@ -251,9 +257,9 @@ describe('WebAuthn P-256 Signer', () => {
             verifyCallCount++
             return true
           },
-          webauthnDid: testDID
+          webauthnDid: testDID,
         }
-        
+
         // Call signature.verify directly with our mock verifier
         const result = await signature.verify(mockVerifier, payload)
         assert.equal(verifyCallCount, 1)
@@ -286,7 +292,10 @@ describe('WebAuthn P-256 Signer', () => {
 
     beforeEach(async () => {
       const authenticateFunction = createMockAuthenticateFunction()
-      signer = WebAuthnSigner.createWebAuthnSigner(testDID, authenticateFunction)
+      signer = WebAuthnSigner.createWebAuthnSigner(
+        testDID,
+        authenticateFunction
+      )
       payload = new TextEncoder().encode('test payload')
       signature = await signer.sign(payload)
     })
@@ -324,7 +333,7 @@ describe('WebAuthn P-256 Signer', () => {
       it('fails verification with wrong payload', async () => {
         const wrongPayload = new TextEncoder().encode('wrong payload')
         const result = await signature.verify(signer.verifier, wrongPayload)
-        
+
         assert.ok(result.error)
         assert.ok(result.error.message.includes('Challenge mismatch'))
       })
@@ -333,7 +342,7 @@ describe('WebAuthn P-256 Signer', () => {
         // Create a signature with invalid context
         const invalidSignature = Object.create(signature)
         invalidSignature.webauthnContext = null
-        
+
         const result = await invalidSignature.verify(signer.verifier, payload)
         // Should fall back to standard verification which we're mocking to fail
         assert.ok(result.error || result.ok) // Either works depending on mock
@@ -349,7 +358,10 @@ describe('WebAuthn P-256 Signer', () => {
       it('validates payload hash matches challenge', async () => {
         const wrongPayload = new TextEncoder().encode('wrong payload')
         try {
-          const result = await signature.verifyWebAuthn(signer.verifier, wrongPayload)
+          const result = await signature.verifyWebAuthn(
+            signer.verifier,
+            wrongPayload
+          )
           // If we get here, verifyWebAuthn returned a result object instead of throwing
           assert.ok(result.error)
           assert.ok(result.error.message.includes('Challenge mismatch'))
@@ -375,7 +387,10 @@ describe('WebAuthn P-256 Signer', () => {
 
     beforeEach(() => {
       const authenticateFunction = createMockAuthenticateFunction()
-      signer = WebAuthnSigner.createWebAuthnSigner(testDID, authenticateFunction)
+      signer = WebAuthnSigner.createWebAuthnSigner(
+        testDID,
+        authenticateFunction
+      )
       verifier = signer.verifier
     })
 
@@ -403,7 +418,7 @@ describe('WebAuthn P-256 Signer', () => {
       it('creates verifier with different DID', () => {
         const newDID = 'did:key:zNewDID'
         const newVerifier = verifier.withDID(newDID)
-        
+
         assert.equal(newVerifier.did(), newDID)
         assert.notEqual(newVerifier, verifier)
       })
@@ -413,15 +428,17 @@ describe('WebAuthn P-256 Signer', () => {
       it('handles WebAuthn signatures', async () => {
         const payload = new TextEncoder().encode('test payload')
         const signature = await signer.sign(payload)
-        
+
         const result = await verifier.verify(payload, signature)
         assert.equal(result, true)
       })
 
       it('handles standard signatures', () => {
         const payload = new TextEncoder().encode('test payload')
-        const mockSignature = { /* standard signature */ }
-        
+        const mockSignature = {
+          /* standard signature */
+        }
+
         const result = verifier.verify(payload, mockSignature)
         assert.equal(result, true) // Mocked to return true
       })
@@ -431,43 +448,49 @@ describe('WebAuthn P-256 Signer', () => {
   describe('Integration', () => {
     it('complete sign and verify flow', async () => {
       const authenticateFunction = createMockAuthenticateFunction()
-      const signer = WebAuthnSigner.createWebAuthnSigner(testDID, authenticateFunction)
-      
+      const signer = WebAuthnSigner.createWebAuthnSigner(
+        testDID,
+        authenticateFunction
+      )
+
       const payload = new TextEncoder().encode('integration test payload')
-      
+
       // Sign with WebAuthn
       const signature = await signer.sign(payload)
       assert.ok(signature)
       // @ts-ignore - WebAuthn signature has webauthnContext property
       assert.ok(signature.webauthnContext)
-      
+
       // Verify with WebAuthn-aware verifier
       const result = await signature.verify(signer.verifier, payload)
       assert.ok(result.ok)
       assert.equal(result.error, undefined)
-      
-      // Verify using signer's verify method  
+
+      // Verify using signer's verify method
       const directResult = await signer.verify(payload, signature)
       assert.equal(directResult, true)
     })
 
     it('fails verification with tampered signature', async () => {
       const authenticateFunction = createMockAuthenticateFunction()
-      const signer = WebAuthnSigner.createWebAuthnSigner(testDID, authenticateFunction)
-      
+      const signer = WebAuthnSigner.createWebAuthnSigner(
+        testDID,
+        authenticateFunction
+      )
+
       const payload = new TextEncoder().encode('integration test payload')
       const signature = await signer.sign(payload)
-      
+
       // Store original signature bytes to compare
       const originalRaw = new Uint8Array(signature.raw)
-      
+
       // Tamper with the raw signature data directly
       const rawView = signature.raw
-      rawView[rawView.length - 1] ^= 0xFF
-      
+      rawView[rawView.length - 1] ^= 0xff
+
       // Verify the signature was actually tampered
       assert.notDeepEqual(originalRaw, rawView)
-      
+
       // Mock the P256 verification to detect tampering
       // @ts-ignore - Global mock for testing
       const originalMock = globalThis._mockP256Verify
@@ -476,17 +499,17 @@ describe('WebAuthn P-256 Signer', () => {
         // Return false if signature bytes don't match original
         return sig.every((byte, i) => byte === originalRaw[i])
       }
-      
+
       // Also mock the verifier as backup
       const originalVerify = signer.verifier.verify
       signer.verifier.verify = (signedData, sig) => {
         const sigRaw = sig.raw || sig
         return sigRaw.every((byte, i) => byte === originalRaw[i])
       }
-      
+
       const result = await signature.verify(signer.verifier, payload)
       assert.ok(result.error)
-      
+
       // Restore original functions
       // @ts-ignore - Global mock for testing
       globalThis._mockP256Verify = originalMock

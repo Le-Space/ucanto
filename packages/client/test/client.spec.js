@@ -8,7 +8,7 @@ import { alice, bob, mallory, service as w3 } from './fixtures.js'
 import fetch from '@web-std/fetch'
 
 test('encode invocation', async () => {
-/** @type {import('@le-space/ucanto-interface').ConnectionView<Service.Service>} */
+  /** @type {import('@le-space/ucanto-interface').ConnectionView<Service.Service>} */
   const connection = Client.connect({
     id: w3,
     channel: HTTP.open({ url: new URL('about:blank'), fetch }),
@@ -117,9 +117,10 @@ test('encode delegated invocation', async () => {
     ])
 
     assert.deepEqual(add.proofs, [proof])
-    const delegation = /** @type {import('@le-space/ucanto-interface').Delegation} */ (
-      add.proofs && add.proofs[0]
-    )
+    const delegation =
+      /** @type {import('@le-space/ucanto-interface').Delegation} */ (
+        add.proofs && add.proofs[0]
+      )
     assert.equal(delegation.issuer.did(), proof.issuer.did())
     assert.equal(delegation.audience.did(), proof.audience.did())
     assert.deepEqual(delegation.capabilities, proof.capabilities)
@@ -151,7 +152,9 @@ const channel = HTTP.open({
       switch (capability.can) {
         case 'store/add': {
           const result = await service.store.add(
-            /** @type {import('@le-space/ucanto-interface').Invocation<any>} */ (invocation)
+            /** @type {import('@le-space/ucanto-interface').Invocation<any>} */ (
+              invocation
+            )
           )
           return Receipt.issue({
             ran: invocation.cid,
@@ -161,7 +164,9 @@ const channel = HTTP.open({
         }
         case 'store/remove': {
           const result = await service.store.remove(
-            /** @type {import('@le-space/ucanto-interface').Invocation<any>} */ (invocation)
+            /** @type {import('@le-space/ucanto-interface').Invocation<any>} */ (
+              invocation
+            )
           )
           return Receipt.issue({
             ran: invocation.cid,
@@ -172,9 +177,10 @@ const channel = HTTP.open({
       }
     })
 
-    const receipts = /** @type {import('@le-space/ucanto-interface').Tuple<import('@le-space/ucanto-interface').Receipt>} */ (
-      await Promise.all(promises)
-    )
+    const receipts =
+      /** @type {import('@le-space/ucanto-interface').Tuple<import('@le-space/ucanto-interface').Receipt>} */ (
+        await Promise.all(promises)
+      )
 
     const message = await Message.build({ receipts })
 

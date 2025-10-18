@@ -1,4 +1,9 @@
-import { Failure as Error, Result, Variant, Phantom } from '@le-space/ucanto-interface'
+import {
+  Failure as Error,
+  Result,
+  Variant,
+  Phantom,
+} from '@le-space/ucanto-interface'
 
 export interface Reader<O = unknown, I = unknown, X extends Error = Error> {
   read(input: I): Result<O, X>

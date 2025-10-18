@@ -32,5 +32,11 @@
     "semi": false,
     "singleQuote": true,
     "arrowParens": "avoid"
+  },
+  "dependencies": {
+    "@ipld/car": "^5.4.2",
+    "@storacha/access": "^1.6.1",
+    "@storacha/client": "^1.8.2",
+    "dotenv": "^17.2.3"
   }
 }

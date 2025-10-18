@@ -1,6 +1,6 @@
 import { capability, DID, URI, Link, Schema, ok, fail } from '../src/lib.js'
-import { parseLink, delegate, UCAN } from '@ucanto/core'
-import * as API from '@ucanto/interface'
+import { parseLink, delegate, UCAN } from '@le-space/ucanto-core'
+import * as API from '@le-space/ucanto-interface'
 import { Failure } from '../src/error.js'
 import { test, assert } from './test.js'
 import { alice, service as w3 } from './fixtures.js'

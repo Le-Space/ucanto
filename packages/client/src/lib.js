@@ -8,7 +8,7 @@ import {
   Schema,
   DAG,
   ok,
-  error
+  error,
 } from '@le-space/ucanto-core'
 
 export const delegate = Delegation.delegate

@@ -18,10 +18,10 @@ async function main() {
   // 2. Basic signing and verification
   console.log('\n2. Basic signing and verification...')
   const message = new TextEncoder().encode('Hello P-256 World!')
-  
+
   const signature = await alice.sign(message)
   console.log(`✓ Signature created with code: ${signature.code}`)
-  
+
   const isValidByAlice = await alice.verify(message, signature)
   const isValidByBob = await bob.verify(message, signature)
   console.log(`✓ Verification by Alice: ${isValidByAlice}`)
@@ -38,13 +38,15 @@ async function main() {
   console.log('\n4. Multiple signature verification...')
   const message1 = new TextEncoder().encode('Message 1')
   const message2 = new TextEncoder().encode('Message 2')
-  
+
   const sig1 = await alice.sign(message1)
   const sig2 = await alice.sign(message2)
-  
+
   console.log(`✓ Signature 1 valid: ${await alice.verify(message1, sig1)}`)
   console.log(`✓ Signature 2 valid: ${await alice.verify(message2, sig2)}`)
-  console.log(`✓ Cross-verification fails: ${await alice.verify(message1, sig2)}`)
+  console.log(
+    `✓ Cross-verification fails: ${await alice.verify(message1, sig2)}`
+  )
 
   console.log('\n🎉 All P-256 operations completed successfully!')
 }

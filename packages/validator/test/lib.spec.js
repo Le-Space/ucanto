@@ -9,11 +9,11 @@ import {
   ok,
   fail,
 } from '../src/lib.js'
-import { Verifier } from '@ucanto/principal'
-import * as Client from '@ucanto/client'
+import { Verifier } from '@le-space/ucanto-principal'
+import * as Client from '@le-space/ucanto-client'
 
 import { alice, bob, mallory, service, service as w3 } from './fixtures.js'
-import { UCAN, DID as Principal } from '@ucanto/core'
+import { UCAN, DID as Principal } from '@le-space/ucanto-core'
 import { UnavailableProof } from '../src/error.js'
 
 const storeAdd = capability({

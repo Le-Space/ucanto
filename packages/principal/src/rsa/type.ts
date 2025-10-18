@@ -1,6 +1,10 @@
-import { VerifierKey, SignerKey, MulticodecCode } from '@ucanto/interface'
+import {
+  VerifierKey,
+  SignerKey,
+  MulticodecCode,
+} from '@le-space/ucanto-interface'
 
-export * from '@ucanto/interface'
+export * from '@le-space/ucanto-interface'
 
 /**
  * Integer corresponding to RS256 byteprefix of the VarSig.

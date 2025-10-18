@@ -4,9 +4,9 @@ import type {
   Link,
   ServiceMethod,
   Failure,
-} from '@ucanto/interface'
+} from '@le-space/ucanto-interface'
 
-export * from '@ucanto/interface'
+export * from '@le-space/ucanto-interface'
 
 type AccountDID = DID<'key'>
 type AgentDID = DID<'key'>

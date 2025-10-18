@@ -1,7 +1,12 @@
 export * from '@le-space/ucanto-interface'
 import * as API from '@le-space/ucanto-interface'
 
-import type { DID, Link, Await, Result as SyncResult } from '@le-space/ucanto-interface'
+import type {
+  DID,
+  Link,
+  Await,
+  Result as SyncResult,
+} from '@le-space/ucanto-interface'
 export type { DID, Link, SyncResult }
 type Result<T extends {} = {}, X extends {} = Error> = Await<API.Result<T, X>>
 
