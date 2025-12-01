@@ -1,7 +1,7 @@
 {
   "name": "@le-space/ucanto-validator",
   "description": "UCAN RPC validators",
-  "version": "10.1.1",
+  "version": "9.0.0",
   "keywords": [
     "UCAN",
     "ed25519",
