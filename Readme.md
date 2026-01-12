@@ -8,6 +8,9 @@
 [![Client Tests](https://github.com/Le-Space/ucanto/actions/workflows/client.yml/badge.svg)](https://github.com/Le-Space/ucanto/actions/workflows/client.yml)
 [![Validator Tests](https://github.com/Le-Space/ucanto/actions/workflows/validator.yml/badge.svg)](https://github.com/Le-Space/ucanto/actions/workflows/validator.yml)
 
+> **Note:** This repository is a temporary fork of `@storacha/ucanto` that adds **P-256 (WebAuthn / Passkey) support**.  
+> It exists only to unblock early P-256 experiments and integrations and **will be removed once P-256 support lands in the official `@storacha/ucanto` packages.**
+
 (u)canto is a library for [UCAN][] based [RPC][] that provides:
 
 1. A declarative system for defining [capabilities][] and [abilities][] (roughly equivalent to HTTP
