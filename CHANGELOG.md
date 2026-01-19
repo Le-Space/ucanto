@@ -7,6 +7,7 @@
 - migrated from @ucanto namespace to @le-space/ucanto namespace
 - updated readme and example code and tests to latest api changes
 - added P-256 principal and WebAuthN support
+- updated WebAuthn Ed25519/P-256 verifiers in @ucanto/principal to support varsig v1 parsing and verification
 
 ## [0.1.0-beta](https://github.com/web3-storage/ucanto/compare/v0.0.3-beta...v0.1.0-beta) (2022-05-03)
 
