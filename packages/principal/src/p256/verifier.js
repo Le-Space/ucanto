@@ -106,11 +106,22 @@ class P256Verifier extends Uint8Array {
    */
   verify(payload, signature) {
     try {
-      return (
-        signature.code === signatureCode &&
-        p256.verify(signature.raw, payload, this.publicKey)
-      )
+      if (signature.code !== signatureCode) {
+        return false
+      }
+      
+      // Detect WebAuthn varsig vs standard signature
+      if (signature.raw.length > 64) {
+        console.log(`🔐 [ucanto-verify] P-256 WebAuthn varsig signature detected (${signature.raw.length} bytes)`)
+        // Note: P-256 WebAuthn varsig support would go here
+        // For now, fall through to standard verification
+      } else {
+        console.log('🔐 [ucanto-verify] Standard P-256 signature (64 bytes)')
+      }
+      
+      return p256.verify(signature.raw, payload, this.publicKey)
     } catch (error) {
+      console.error('❌ [ucanto-verify] P-256 verification failed:', error)
       return false
     }
   }

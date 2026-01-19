@@ -1,7 +1,7 @@
 {
   "name": "@le-space/ucanto-principal",
   "description": "ucanto principal",
-  "version": "9.1.1",
+  "version": "9.1.2",
   "keywords": [
     "UCAN",
     "ed25519",

@@ -239,3 +239,69 @@ function bytesEqual(a, b) {
   }
   return true
 }
+
+/**
+ * Standalone varsig verification function
+ * Used by Ed25519Verifier to verify WebAuthn varsig signatures
+ * 
+ * @param {Uint8Array} payload - The payload that was signed
+ * @param {Uint8Array} varsigBytes - The varsig-encoded signature
+ * @param {Uint8Array} publicKey - Ed25519 public key (32 bytes)
+ * @returns {Promise<boolean>}
+ */
+export async function verifyVarsig(payload, varsigBytes, publicKey) {
+  try {
+    // Decode varsig from signature.raw
+    const decoded = decodeVarsig(varsigBytes)
+    
+    // The payload was hashed to create the WebAuthn challenge
+    const payloadHash = await crypto.subtle.digest('SHA-256', payload)
+    const expectedChallenge = new Uint8Array(payloadHash)
+    
+    // Parse clientDataJSON to get the actual challenge
+    const clientDataText = new TextDecoder().decode(decoded.clientDataJSON)
+    const clientData = JSON.parse(clientDataText)
+    const actualChallenge = base64urlToBytes(clientData.challenge)
+    
+    // Verify challenge matches
+    if (!bytesEqual(expectedChallenge, actualChallenge)) {
+      console.error('[ucanto-varsig] Challenge mismatch')
+      return false
+    }
+    
+    // Reconstruct the signed data: authenticatorData || SHA-256(clientDataJSON)
+    const clientDataHash = await crypto.subtle.digest('SHA-256', decoded.clientDataJSON)
+    const signedData = new Uint8Array(
+      decoded.authenticatorData.length + clientDataHash.byteLength
+    )
+    signedData.set(decoded.authenticatorData, 0)
+    signedData.set(new Uint8Array(clientDataHash), decoded.authenticatorData.length)
+    
+    // Verify Ed25519 signature
+    const cryptoKey = await crypto.subtle.importKey(
+      'raw',
+      publicKey,
+      { name: 'Ed25519' },
+      false,
+      ['verify']
+    )
+    
+    const valid = await crypto.subtle.verify(
+      'Ed25519',
+      cryptoKey,
+      decoded.signature,
+      signedData
+    )
+    
+    if (valid) {
+      console.log('✅ [ucanto-varsig] Signature verified successfully')
+    } else {
+      console.error('❌ [ucanto-varsig] Signature verification failed')
+    }
+    
+    return valid
+  } catch (error) {
+    console.error('[ucanto-varsig] Verification error:', error)
+    return false
+  }
+}

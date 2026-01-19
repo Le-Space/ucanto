@@ -106,13 +106,24 @@ class Ed25519Verifier extends Uint8Array {
    * @template T
    * @param {API.ByteView<T>} payload
    * @param {API.Signature<T, Signature.EdDSA>} signature
-   * @returns {API.Await<boolean>}
+   * @returns {Promise<boolean>}
    */
-  verify(payload, signature) {
-    return (
-      signature.code === signatureCode &&
-      ED25519.verify(signature.raw, payload, this.publicKey)
-    )
+  async verify(payload, signature) {
+    if (signature.code !== signatureCode) {
+      return false
+    }
+
+    // Detect varsig format: signature.raw > 64 bytes indicates WebAuthn varsig
+    if (signature.raw.length > 64) {
+      console.log(`🔐 [ucanto-verify] Ed25519 WebAuthn varsig signature detected (${signature.raw.length} bytes)`)
+      // Lazy-load WebAuthn verifier
+      const { verifyVarsig } = await import('../webauthn-ed25519/verifier.js')
+      return verifyVarsig(payload, signature.raw, this.publicKey)
+    }
+
+    // Standard Ed25519 signature (64 bytes)
+    console.log('🔐 [ucanto-verify] Standard Ed25519 signature (64 bytes)')
+    return ED25519.verify(signature.raw, payload, this.publicKey)
   }
 
   /**
