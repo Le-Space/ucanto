@@ -1,5 +1,74 @@
 # Changelog
 
+## [9.0.0](https://github.com/Le-Space/ucanto/compare/ucanto-principal-v9.0.2...ucanto-principal-v9.0.0) (2026-02-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* update `@ucanto/interface` dependencies ([#310](https://github.com/Le-Space/ucanto/issues/310))
+* cause release ([#235](https://github.com/Le-Space/ucanto/issues/235))
+* update session API ([#227](https://github.com/Le-Space/ucanto/issues/227))
+* did prinicipal ([#149](https://github.com/Le-Space/ucanto/issues/149))
+* upgrades to multiformats@10 ([#117](https://github.com/Le-Space/ucanto/issues/117))
+* switch decoder API to zod like schema API ([#108](https://github.com/Le-Space/ucanto/issues/108))
+* upgrade to ucan 0.9 ([#95](https://github.com/Le-Space/ucanto/issues/95))
+* update dag-ucan, types and names ([#90](https://github.com/Le-Space/ucanto/issues/90))
+
+### Features
+
+* Add WebAuthn Ed25519 varsig support to ucanto principal ([5b315c9](https://github.com/Le-Space/ucanto/commit/5b315c98704a8e8a40909ac804315897310e82ea))
+* align implementation with receipt 0.2 spec ([#271](https://github.com/Le-Space/ucanto/issues/271)) ([aeea7e3](https://github.com/Le-Space/ucanto/commit/aeea7e3c7494143dce535792b0d53520e559c45a))
+* cause release ([#235](https://github.com/Le-Space/ucanto/issues/235)) ([168ac01](https://github.com/Le-Space/ucanto/commit/168ac018b51e93998190d3196aec93fe44f082e5))
+* did prinicipal ([#149](https://github.com/Le-Space/ucanto/issues/149)) ([4c11092](https://github.com/Le-Space/ucanto/commit/4c11092e420292af697bd5bec126112f9b961612))
+* embedded key resolution ([#168](https://github.com/Le-Space/ucanto/issues/168)) ([5e650f3](https://github.com/Le-Space/ucanto/commit/5e650f376db79c690e4771695d1ff4e6deece40e))
+* implement rsa signer / verifier ([#102](https://github.com/Le-Space/ucanto/issues/102)) ([8ed7777](https://github.com/Le-Space/ucanto/commit/8ed77770142259be03c3d6a8108365db1ab796b2))
+* implement support for BLS keys ([#318](https://github.com/Le-Space/ucanto/issues/318)) ([0bee77e](https://github.com/Le-Space/ucanto/commit/0bee77e13174a1f964fe67fd25a3eaf6ee00f141))
+* implement sync car decode ([#253](https://github.com/Le-Space/ucanto/issues/253)) ([40acaac](https://github.com/Le-Space/ucanto/commit/40acaac52870a68a358370bb1b3a5f4f081943d7))
+* migrate from [@ucanto](https://github.com/ucanto) to @le-space/ucanto namespace… ([26dc44c](https://github.com/Le-Space/ucanto/commit/26dc44c27c5c68b6256c453036d224d5f251bafb))
+* switch decoder API to zod like schema API ([#108](https://github.com/Le-Space/ucanto/issues/108)) ([e2e03ff](https://github.com/Le-Space/ucanto/commit/e2e03ffeb35f00627335dbfd3e128e2cf9dcfdee))
+* update `@ucanto/interface` dependencies ([#310](https://github.com/Le-Space/ucanto/issues/310)) ([3d1adbf](https://github.com/Le-Space/ucanto/commit/3d1adbf0011db1a1d602040bbdc84b1e3721f62c))
+* update dag-ucan, types and names ([#90](https://github.com/Le-Space/ucanto/issues/90)) ([cd792c9](https://github.com/Le-Space/ucanto/commit/cd792c934fbd358d6ccfa5d02f205b14b5f2e14e))
+* update multiformats ([#197](https://github.com/Le-Space/ucanto/issues/197)) ([b92a6c6](https://github.com/Le-Space/ucanto/commit/b92a6c6f5c066890a25e62205ff9848b1fb8dde1))
+* update session API ([#227](https://github.com/Le-Space/ucanto/issues/227)) ([9bbb2f7](https://github.com/Le-Space/ucanto/commit/9bbb2f796fd57ebe1ecd2112de1927b23a1577bd))
+* update to latest dag-ucan ([#165](https://github.com/Le-Space/ucanto/issues/165)) ([20e50de](https://github.com/Le-Space/ucanto/commit/20e50de5e311781ee8dc10e32de4eb12e8df2080))
+* upgrade to ucan 0.9 ([#95](https://github.com/Le-Space/ucanto/issues/95)) ([b752b39](https://github.com/Le-Space/ucanto/commit/b752b398950120d6121badcdbb639f4dc9ce8794))
+* upgrades to multiformats@10 ([#117](https://github.com/Le-Space/ucanto/issues/117)) ([61dc4ca](https://github.com/Le-Space/ucanto/commit/61dc4cafece3365bbf60f709265ea71180f226d7))
+
+
+### Bug Fixes
+
+* correct JSON syntax in principal package.json ([5e4d224](https://github.com/Le-Space/ucanto/commit/5e4d224ef2044c5353da99e606286ac77b717f8e))
+* ed type export ([#154](https://github.com/Le-Space/ucanto/issues/154)) ([2f14271](https://github.com/Le-Space/ucanto/commit/2f142715ec7350f57b0a43374f699695292f6edd))
+* expose multiformat ([#248](https://github.com/Le-Space/ucanto/issues/248)) ([9a74a0e](https://github.com/Le-Space/ucanto/commit/9a74a0e734809cfb38a7b4c976e0d7f2e4dcf4aa))
+* optional field validation ([#124](https://github.com/Le-Space/ucanto/issues/124)) ([87b70d2](https://github.com/Le-Space/ucanto/commit/87b70d2d56c07f8257717fa5ef584a21eb0417c8))
+* parse should take strings ([#93](https://github.com/Le-Space/ucanto/issues/93)) ([db57d6b](https://github.com/Le-Space/ucanto/commit/db57d6bdf3ad989e4dc6e906d9b0bce4befbd735))
+* **principal:** improve WebAuthn test exclusion pattern for TypeScript… ([a3a2200](https://github.com/Le-Space/ucanto/commit/a3a22005b3d91667eefe69f4e97238b79861aec6))
+* **principal:** update webauthn/p256 verifiers ([8096adb](https://github.com/Le-Space/ucanto/commit/8096adb0cdda240b7d454f324291aa6ee6454683))
+* reconfigure release-please ([#230](https://github.com/Le-Space/ucanto/issues/230)) ([c16e100](https://github.com/Le-Space/ucanto/commit/c16e10004a5d9f3071f9bfe833e3888851fe4202))
+* toJSON behavior on the ucan.data ([#185](https://github.com/Le-Space/ucanto/issues/185)) ([d1ee6b6](https://github.com/Le-Space/ucanto/commit/d1ee6b6a0044d53359f0e20f631e3b86e4b94ab3))
+* trigger interface upgrade for all packages ([#349](https://github.com/Le-Space/ucanto/issues/349)) ([255f0c1](https://github.com/Le-Space/ucanto/commit/255f0c1a7779ae9356e8f889e22b491a9789d334))
+* trigger releases ([a0d9291](https://github.com/Le-Space/ucanto/commit/a0d9291f9e20456e115fa6c7890cafe937fa511e))
+* type mapping regression ([#246](https://github.com/Le-Space/ucanto/issues/246)) ([e992549](https://github.com/Le-Space/ucanto/commit/e992549c3268e13512176ff45c9ee8f04b153556))
+* upgrade dependencies ([#366](https://github.com/Le-Space/ucanto/issues/366)) ([bf6274c](https://github.com/Le-Space/ucanto/commit/bf6274ce637bab6a97f38065cf6c2b7eb10e3c24))
+
+
+### Miscellaneous Chores
+
+* release 0.0.1-beta ([d6c7e73](https://github.com/Le-Space/ucanto/commit/d6c7e73de56278e2f2c92c4a0e1a2709c92bcbf9))
+* release 0.7.0 ([b3a441d](https://github.com/Le-Space/ucanto/commit/b3a441d4f3d85ab5ae3e2a0331dfacbdd038be23))
+* release 4.0.2 ([e9e35df](https://github.com/Le-Space/ucanto/commit/e9e35dffeeb7e5b5e19627f791b66bbdd35d2d11))
+* release 4.2.2 ([b92c345](https://github.com/Le-Space/ucanto/commit/b92c3455e0c34f2fc566d00422c19d11c03626f5))
+* release 4.2.2 ([fdb5326](https://github.com/Le-Space/ucanto/commit/fdb53260ae2f54cdb8fd9973be5386b36c3af4d0))
+* release 4.2.3 ([5dc8158](https://github.com/Le-Space/ucanto/commit/5dc8158341cd668304c94a4b83e1d9b9affae410))
+* release 4.3.0 ([b53bf3d](https://github.com/Le-Space/ucanto/commit/b53bf3d9fb582006598aa02ae4c534dfcc68c189))
+* release 4.3.1 ([5c76285](https://github.com/Le-Space/ucanto/commit/5c762859c53de307486a8cf5f7c517b24a66d0f4))
+* release 4.3.3 ([12ea70b](https://github.com/Le-Space/ucanto/commit/12ea70bbb06d43f7b98017e229f1e1af0dc2fa50))
+* release 4.3.4 ([baad652](https://github.com/Le-Space/ucanto/commit/baad652ff7d9760d58bbada161b293e653e6d20e))
+* release 4.4.0 ([e47dbfc](https://github.com/Le-Space/ucanto/commit/e47dbfc04b8caa2e3024c960c556251fc5fd9df7))
+* release 5.0.0 ([1f809a9](https://github.com/Le-Space/ucanto/commit/1f809a9d41494756e155ffb951864a8b26673642))
+* release 7.0.0 ([84e5c48](https://github.com/Le-Space/ucanto/commit/84e5c48141abd9555acc3adc910b00caff36ac44))
+* release 9.0.0 ([303cc44](https://github.com/Le-Space/ucanto/commit/303cc4429dfb6058ef152eacc50ca146d3546743))
+
 ## [9.1.0](https://github.com/Le-Space/ucanto/compare/principal-v9.0.2...principal-v9.1.0) (2025-01-15)
 
 ### Changed
