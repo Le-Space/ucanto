@@ -4,6 +4,7 @@ tmp
 node_modules
 
 coverage
+.npmrc
 .pnpm-debug.log
 .env
 .vscode
