@@ -1,5 +1,101 @@
 # Changelog
 
+## [9.0.0](https://github.com/Le-Space/ucanto/compare/ucanto-validator-v10.0.0...ucanto-validator-v9.0.0) (2026-02-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* resolve multiple verifiers ([#381](https://github.com/Le-Space/ucanto/issues/381))
+* update `@ucanto/interface` dependencies ([#310](https://github.com/Le-Space/ucanto/issues/310))
+* migrate schema to core ([#273](https://github.com/Le-Space/ucanto/issues/273))
+* update ucanto to invocation spec compatible result type ([#272](https://github.com/Le-Space/ucanto/issues/272))
+* implement invocation receipts ([#266](https://github.com/Le-Space/ucanto/issues/266))
+* remove canIssue hook default from the server ([#251](https://github.com/Le-Space/ucanto/issues/251))
+* cause release ([#235](https://github.com/Le-Space/ucanto/issues/235))
+* update session API ([#227](https://github.com/Le-Space/ucanto/issues/227))
+* Use schema stuff in the capabilities instead of custom parsing ([#220](https://github.com/Le-Space/ucanto/issues/220))
+* wildcard support in capabilies ([#218](https://github.com/Le-Space/ucanto/issues/218))
+* upgrades to multiformats@10 ([#117](https://github.com/Le-Space/ucanto/issues/117))
+* switch decoder API to zod like schema API ([#108](https://github.com/Le-Space/ucanto/issues/108))
+* upgrade to ucan 0.9 ([#95](https://github.com/Le-Space/ucanto/issues/95))
+* update dag-ucan, types and names ([#90](https://github.com/Le-Space/ucanto/issues/90))
+
+### Features
+
+* add revocation checker hook ([#320](https://github.com/Le-Space/ucanto/issues/320)) ([0c2dbc6](https://github.com/Le-Space/ucanto/commit/0c2dbc6cdda6bdfad0b1c2ee33eaf37bfd470540))
+* alight link API with multiformats ([#36](https://github.com/Le-Space/ucanto/issues/36)) ([0ec460e](https://github.com/Le-Space/ucanto/commit/0ec460e43ddda0bb3a3fea8a7881da1463154f36))
+* capability provider API ([#34](https://github.com/Le-Space/ucanto/issues/34)) ([ea89f97](https://github.com/Le-Space/ucanto/commit/ea89f97125bb484a12ce3ca09a7884911a9fd4d6))
+* cause release ([#235](https://github.com/Le-Space/ucanto/issues/235)) ([168ac01](https://github.com/Le-Space/ucanto/commit/168ac018b51e93998190d3196aec93fe44f082e5))
+* cherry pick changes from uploads-v2 demo ([#43](https://github.com/Le-Space/ucanto/issues/43)) ([4308fd2](https://github.com/Le-Space/ucanto/commit/4308fd2f392b9fcccc52af64432dcb04c8257e0b))
+* configurable audience handlers ([#257](https://github.com/Le-Space/ucanto/issues/257)) ([f8d001c](https://github.com/Le-Space/ucanto/commit/f8d001cf721b0e96757fa372993f2fe6b6e8d520))
+* delgation iterate, more errors and types  ([0606168](https://github.com/Le-Space/ucanto/commit/0606168313d17d66bcc1ad6091440765e1700a4f))
+* embedded key resolution ([#168](https://github.com/Le-Space/ucanto/issues/168)) ([5e650f3](https://github.com/Le-Space/ucanto/commit/5e650f376db79c690e4771695d1ff4e6deece40e))
+* Impelment InferInvokedCapability per [#99](https://github.com/Le-Space/ucanto/issues/99) ([#100](https://github.com/Le-Space/ucanto/issues/100)) ([fc5a2ac](https://github.com/Le-Space/ucanto/commit/fc5a2ace33f2a3599a654d8edd1641d111032074))
+* implement .delegate on capabilities ([#110](https://github.com/Le-Space/ucanto/issues/110)) ([fd0bb9d](https://github.com/Le-Space/ucanto/commit/fd0bb9da58836c05d6ee9f60cd6b1cb6b747e3b1))
+* implement dictionary schema ([#192](https://github.com/Le-Space/ucanto/issues/192)) ([a872395](https://github.com/Le-Space/ucanto/commit/a8723950a42636b5da658c4e8272a46a7a899e6d))
+* implement invocation receipts ([#266](https://github.com/Le-Space/ucanto/issues/266)) ([5341416](https://github.com/Le-Space/ucanto/commit/5341416a5f1ba5048c41476bb6c6059556e8e27b))
+* implement sync car decode ([#253](https://github.com/Le-Space/ucanto/issues/253)) ([40acaac](https://github.com/Le-Space/ucanto/commit/40acaac52870a68a358370bb1b3a5f4f081943d7))
+* migrate from [@ucanto](https://github.com/ucanto) to @le-space/ucanto namespace… ([26dc44c](https://github.com/Le-Space/ucanto/commit/26dc44c27c5c68b6256c453036d224d5f251bafb))
+* migrate schema to core ([#273](https://github.com/Le-Space/ucanto/issues/273)) ([ce95504](https://github.com/Le-Space/ucanto/commit/ce95504a0e7cf7caf49418016dbb924b4cbc2e82))
+* refactor into monorepo ([#13](https://github.com/Le-Space/ucanto/issues/13)) ([1f99506](https://github.com/Le-Space/ucanto/commit/1f995064ec6e5953118c2dd1065ee6be959f25b9))
+* remove canIssue hook default from the server ([#251](https://github.com/Le-Space/ucanto/issues/251)) ([6e48019](https://github.com/Le-Space/ucanto/commit/6e48019b905787b64b194bc0de0b1cd2c2cc3edc))
+* resolve multiple verifiers ([#381](https://github.com/Le-Space/ucanto/issues/381)) ([6254993](https://github.com/Le-Space/ucanto/commit/6254993eb7368040a6232d50a1d68a123d2ed799))
+* rip out special handling of my: and as: capabilities ([#109](https://github.com/Le-Space/ucanto/issues/109)) ([3ec8e64](https://github.com/Le-Space/ucanto/commit/3ec8e6434a096221bf72193e074810cc18dd5cd8))
+* setup pnpm & release-please ([84ac7f1](https://github.com/Le-Space/ucanto/commit/84ac7f12e5a66ee4919fa7527858dc916850e3e0))
+* switch decoder API to zod like schema API ([#108](https://github.com/Le-Space/ucanto/issues/108)) ([e2e03ff](https://github.com/Le-Space/ucanto/commit/e2e03ffeb35f00627335dbfd3e128e2cf9dcfdee))
+* **ucanto:** capability create / inovke methods ([#51](https://github.com/Le-Space/ucanto/issues/51)) ([ddf56b1](https://github.com/Le-Space/ucanto/commit/ddf56b1ec80ff6c0698255c531936d8eeab532fd))
+* **ucanto:** URI protocol type retention & capability constructors ([e291544](https://github.com/Le-Space/ucanto/commit/e2915447254990d6e2384ff79a1da38120426ed5))
+* update `@ucanto/interface` dependencies ([#310](https://github.com/Le-Space/ucanto/issues/310)) ([3d1adbf](https://github.com/Le-Space/ucanto/commit/3d1adbf0011db1a1d602040bbdc84b1e3721f62c))
+* update dag-ucan, types and names ([#90](https://github.com/Le-Space/ucanto/issues/90)) ([cd792c9](https://github.com/Le-Space/ucanto/commit/cd792c934fbd358d6ccfa5d02f205b14b5f2e14e))
+* update multiformats ([#197](https://github.com/Le-Space/ucanto/issues/197)) ([b92a6c6](https://github.com/Le-Space/ucanto/commit/b92a6c6f5c066890a25e62205ff9848b1fb8dde1))
+* update session API ([#227](https://github.com/Le-Space/ucanto/issues/227)) ([9bbb2f7](https://github.com/Le-Space/ucanto/commit/9bbb2f796fd57ebe1ecd2112de1927b23a1577bd))
+* update ucanto to invocation spec compatible result type ([#272](https://github.com/Le-Space/ucanto/issues/272)) ([b124ed8](https://github.com/Le-Space/ucanto/commit/b124ed8299a94e5a6b5abcb7cd075dd46ac4139d))
+* upgrade to ucan 0.9 ([#95](https://github.com/Le-Space/ucanto/issues/95)) ([b752b39](https://github.com/Le-Space/ucanto/commit/b752b398950120d6121badcdbb639f4dc9ce8794))
+* upgrades to multiformats@10 ([#117](https://github.com/Le-Space/ucanto/issues/117)) ([61dc4ca](https://github.com/Le-Space/ucanto/commit/61dc4cafece3365bbf60f709265ea71180f226d7))
+* Use schema stuff in the capabilities instead of custom parsing ([#220](https://github.com/Le-Space/ucanto/issues/220)) ([8a578ae](https://github.com/Le-Space/ucanto/commit/8a578ae403f7270fc741f8aef07f1d3621fb29f9))
+* validate attestation from another service ([#369](https://github.com/Le-Space/ucanto/issues/369)) ([bac2cb0](https://github.com/Le-Space/ucanto/commit/bac2cb08bd67de97ef6a7360713e4fd1d0ae1d5c)), closes [#267](https://github.com/Le-Space/ucanto/issues/267)
+* wildcard support in capabilies ([#218](https://github.com/Le-Space/ucanto/issues/218)) ([545d9c2](https://github.com/Le-Space/ucanto/commit/545d9c25d9bd8000eaff4978432bc1bbba14654e))
+
+
+### Bug Fixes
+
+* add [@returns](https://github.com/returns) to @ucanto/validator Schema.dictionary() to avoid problematic inference when using derives ([#215](https://github.com/Le-Space/ucanto/issues/215)) ([620421d](https://github.com/Le-Space/ucanto/commit/620421d450a82d165301ae8d0ebad1ec041db636))
+* add return type to URI.uri() schema ([#127](https://github.com/Le-Space/ucanto/issues/127)) ([c302866](https://github.com/Le-Space/ucanto/commit/c3028667bc1094e6f6b16c43b3a396ef6207f75c))
+* build types before publishing ([#71](https://github.com/Le-Space/ucanto/issues/71)) ([04b7958](https://github.com/Le-Space/ucanto/commit/04b79588f77dba234aaf628f62f574b124bd540b))
+* correct JSON syntax errors and missing workspace dependencies ([18ef65d](https://github.com/Le-Space/ucanto/commit/18ef65ddf642cd1c4da3e3819f869e00b315b007))
+* downgrade versions ([#158](https://github.com/Le-Space/ucanto/issues/158)) ([f814e75](https://github.com/Le-Space/ucanto/commit/f814e75a89d3ed7c3488a8cb7af8d94f0cfba440))
+* error messages on invalid proofs ([#187](https://github.com/Le-Space/ucanto/issues/187)) ([cb1a3bc](https://github.com/Le-Space/ucanto/commit/cb1a3bca9d51c95f369f28f1c2be46ee213ed053))
+* exponential scan ([#329](https://github.com/Le-Space/ucanto/issues/329)) ([a81c8d5](https://github.com/Le-Space/ucanto/commit/a81c8d5d43c7da502504093d9d12e2c0d4619b2d))
+* infinite recursion with unknown attestation ([#368](https://github.com/Le-Space/ucanto/issues/368)) ([d94496a](https://github.com/Le-Space/ucanto/commit/d94496a1aeabf21b8206a6e345fe6b7772b3d52a))
+* intermittent test failures ([#166](https://github.com/Le-Space/ucanto/issues/166)) ([6cb0348](https://github.com/Le-Space/ucanto/commit/6cb03482bd257d2ea62b6558e1f6ee1a693b68fb))
+* optional caveats ([#106](https://github.com/Le-Space/ucanto/issues/106)) ([537a4c8](https://github.com/Le-Space/ucanto/commit/537a4c86fdd02c26c1442d6a205e8977afbad603))
+* optional field validation ([#124](https://github.com/Le-Space/ucanto/issues/124)) ([87b70d2](https://github.com/Le-Space/ucanto/commit/87b70d2d56c07f8257717fa5ef584a21eb0417c8))
+* reconfigure release-please ([#230](https://github.com/Le-Space/ucanto/issues/230)) ([c16e100](https://github.com/Le-Space/ucanto/commit/c16e10004a5d9f3071f9bfe833e3888851fe4202))
+* trigger interface upgrade for all packages ([#349](https://github.com/Le-Space/ucanto/issues/349)) ([255f0c1](https://github.com/Le-Space/ucanto/commit/255f0c1a7779ae9356e8f889e22b491a9789d334))
+* trigger releases ([a0d9291](https://github.com/Le-Space/ucanto/commit/a0d9291f9e20456e115fa6c7890cafe937fa511e))
+* update @ipld/car and @ipld/dag-cbor deps ([#120](https://github.com/Le-Space/ucanto/issues/120)) ([5dcd7a5](https://github.com/Le-Space/ucanto/commit/5dcd7a5788dfd126f332b126f7ad1215972f29c4))
+* upgrade dependencies ([#366](https://github.com/Le-Space/ucanto/issues/366)) ([bf6274c](https://github.com/Le-Space/ucanto/commit/bf6274ce637bab6a97f38065cf6c2b7eb10e3c24))
+* **validator:** resolve TypeScript literal type inference for error class names… ([df215a0](https://github.com/Le-Space/ucanto/commit/df215a089858eb28cf44a3d2240caf1e82be8615))
+* versions ([#131](https://github.com/Le-Space/ucanto/issues/131)) ([88b87a7](https://github.com/Le-Space/ucanto/commit/88b87a7f3a32c02a22ddffcb8f38199445097133))
+
+
+### Miscellaneous Chores
+
+* release 0.0.1-beta ([d6c7e73](https://github.com/Le-Space/ucanto/commit/d6c7e73de56278e2f2c92c4a0e1a2709c92bcbf9))
+* release 0.7.0 ([b3a441d](https://github.com/Le-Space/ucanto/commit/b3a441d4f3d85ab5ae3e2a0331dfacbdd038be23))
+* release 4.0.2 ([e9e35df](https://github.com/Le-Space/ucanto/commit/e9e35dffeeb7e5b5e19627f791b66bbdd35d2d11))
+* release 4.2.2 ([b92c345](https://github.com/Le-Space/ucanto/commit/b92c3455e0c34f2fc566d00422c19d11c03626f5))
+* release 4.2.2 ([fdb5326](https://github.com/Le-Space/ucanto/commit/fdb53260ae2f54cdb8fd9973be5386b36c3af4d0))
+* release 4.2.3 ([5dc8158](https://github.com/Le-Space/ucanto/commit/5dc8158341cd668304c94a4b83e1d9b9affae410))
+* release 4.3.0 ([b53bf3d](https://github.com/Le-Space/ucanto/commit/b53bf3d9fb582006598aa02ae4c534dfcc68c189))
+* release 4.3.1 ([5c76285](https://github.com/Le-Space/ucanto/commit/5c762859c53de307486a8cf5f7c517b24a66d0f4))
+* release 4.3.3 ([12ea70b](https://github.com/Le-Space/ucanto/commit/12ea70bbb06d43f7b98017e229f1e1af0dc2fa50))
+* release 4.3.4 ([baad652](https://github.com/Le-Space/ucanto/commit/baad652ff7d9760d58bbada161b293e653e6d20e))
+* release 4.4.0 ([e47dbfc](https://github.com/Le-Space/ucanto/commit/e47dbfc04b8caa2e3024c960c556251fc5fd9df7))
+* release 5.0.0 ([1f809a9](https://github.com/Le-Space/ucanto/commit/1f809a9d41494756e155ffb951864a8b26673642))
+* release 7.0.0 ([84e5c48](https://github.com/Le-Space/ucanto/commit/84e5c48141abd9555acc3adc910b00caff36ac44))
+* release 9.0.0 ([303cc44](https://github.com/Le-Space/ucanto/commit/303cc4429dfb6058ef152eacc50ca146d3546743))
+
 ## [10.1.0](https://github.com/Le-Space/ucanto/compare/validator-v10.0.0...validator-v10.1.0) (2025-01-15)
 
 ### Changed

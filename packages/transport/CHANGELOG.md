@@ -1,5 +1,84 @@
 # Changelog
 
+## [9.0.0](https://github.com/Le-Space/ucanto/compare/ucanto-transport-v9.2.0...ucanto-transport-v9.0.0) (2026-02-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* update `@ucanto/interface` dependencies ([#310](https://github.com/Le-Space/ucanto/issues/310))
+* versioned wire transport ([#274](https://github.com/Le-Space/ucanto/issues/274))
+* update ucanto to invocation spec compatible result type ([#272](https://github.com/Le-Space/ucanto/issues/272))
+* implement invocation receipts ([#266](https://github.com/Le-Space/ucanto/issues/266))
+* cause release ([#235](https://github.com/Le-Space/ucanto/issues/235))
+* update session API ([#227](https://github.com/Le-Space/ucanto/issues/227))
+* upgrades to multiformats@10 ([#117](https://github.com/Le-Space/ucanto/issues/117))
+* upgrade to ucan 0.9 ([#95](https://github.com/Le-Space/ucanto/issues/95))
+* update dag-ucan, types and names ([#90](https://github.com/Le-Space/ucanto/issues/90))
+
+### Features
+
+* alight link API with multiformats ([#36](https://github.com/Le-Space/ucanto/issues/36)) ([0ec460e](https://github.com/Le-Space/ucanto/commit/0ec460e43ddda0bb3a3fea8a7881da1463154f36))
+* align implementation with receipt 0.2 spec ([#271](https://github.com/Le-Space/ucanto/issues/271)) ([aeea7e3](https://github.com/Le-Space/ucanto/commit/aeea7e3c7494143dce535792b0d53520e559c45a))
+* capability provider API ([#34](https://github.com/Le-Space/ucanto/issues/34)) ([ea89f97](https://github.com/Le-Space/ucanto/commit/ea89f97125bb484a12ce3ca09a7884911a9fd4d6))
+* cause release ([#235](https://github.com/Le-Space/ucanto/issues/235)) ([168ac01](https://github.com/Le-Space/ucanto/commit/168ac018b51e93998190d3196aec93fe44f082e5))
+* cherry pick changes from uploads-v2 demo ([#43](https://github.com/Le-Space/ucanto/issues/43)) ([4308fd2](https://github.com/Le-Space/ucanto/commit/4308fd2f392b9fcccc52af64432dcb04c8257e0b))
+* delgation iterate, more errors and types  ([0606168](https://github.com/Le-Space/ucanto/commit/0606168313d17d66bcc1ad6091440765e1700a4f))
+* http transport includes more information in error message when encountering non-ok http response ([d5f6916](https://github.com/Le-Space/ucanto/commit/d5f6916a41447bcc32bfbd9378da2b4779ca2136))
+* implement invocation receipts ([#266](https://github.com/Le-Space/ucanto/issues/266)) ([5341416](https://github.com/Le-Space/ucanto/commit/5341416a5f1ba5048c41476bb6c6059556e8e27b))
+* implement sync car decode ([#253](https://github.com/Le-Space/ucanto/issues/253)) ([40acaac](https://github.com/Le-Space/ucanto/commit/40acaac52870a68a358370bb1b3a5f4f081943d7))
+* migrate from [@ucanto](https://github.com/ucanto) to @le-space/ucanto namespace… ([26dc44c](https://github.com/Le-Space/ucanto/commit/26dc44c27c5c68b6256c453036d224d5f251bafb))
+* refactor into monorepo ([#13](https://github.com/Le-Space/ucanto/issues/13)) ([1f99506](https://github.com/Le-Space/ucanto/commit/1f995064ec6e5953118c2dd1065ee6be959f25b9))
+* setup pnpm & release-please ([84ac7f1](https://github.com/Le-Space/ucanto/commit/84ac7f12e5a66ee4919fa7527858dc916850e3e0))
+* support execution of materialized invocations ([#199](https://github.com/Le-Space/ucanto/issues/199)) ([275bc24](https://github.com/Le-Space/ucanto/commit/275bc2439d81d0822c03ac62ba56f63d965d2622))
+* **transport:** support custom headers in HTTP transport ([#376](https://github.com/Le-Space/ucanto/issues/376)) ([a673222](https://github.com/Le-Space/ucanto/commit/a67322283f8a4f3f40f5bc3ea0d5f4e132d0a6a1))
+* **ucanto:** upstream changes from w3 branch ([#54](https://github.com/Le-Space/ucanto/issues/54)) ([861e997](https://github.com/Le-Space/ucanto/commit/861e997e31c2a51195b8384eff5df656b6ec9efc))
+* **ucanto:** URI protocol type retention & capability constructors ([e291544](https://github.com/Le-Space/ucanto/commit/e2915447254990d6e2384ff79a1da38120426ed5))
+* update `@ucanto/interface` dependencies ([#310](https://github.com/Le-Space/ucanto/issues/310)) ([3d1adbf](https://github.com/Le-Space/ucanto/commit/3d1adbf0011db1a1d602040bbdc84b1e3721f62c))
+* update dag-ucan, types and names ([#90](https://github.com/Le-Space/ucanto/issues/90)) ([cd792c9](https://github.com/Le-Space/ucanto/commit/cd792c934fbd358d6ccfa5d02f205b14b5f2e14e))
+* update multiformats ([#197](https://github.com/Le-Space/ucanto/issues/197)) ([b92a6c6](https://github.com/Le-Space/ucanto/commit/b92a6c6f5c066890a25e62205ff9848b1fb8dde1))
+* update session API ([#227](https://github.com/Le-Space/ucanto/issues/227)) ([9bbb2f7](https://github.com/Le-Space/ucanto/commit/9bbb2f796fd57ebe1ecd2112de1927b23a1577bd))
+* update ucanto to invocation spec compatible result type ([#272](https://github.com/Le-Space/ucanto/issues/272)) ([b124ed8](https://github.com/Le-Space/ucanto/commit/b124ed8299a94e5a6b5abcb7cd075dd46ac4139d))
+* upgrade to ucan 0.9 ([#95](https://github.com/Le-Space/ucanto/issues/95)) ([b752b39](https://github.com/Le-Space/ucanto/commit/b752b398950120d6121badcdbb639f4dc9ce8794))
+* upgrades to multiformats@10 ([#117](https://github.com/Le-Space/ucanto/issues/117)) ([61dc4ca](https://github.com/Le-Space/ucanto/commit/61dc4cafece3365bbf60f709265ea71180f226d7))
+* versioned wire transport ([#274](https://github.com/Le-Space/ucanto/issues/274)) ([25abb67](https://github.com/Le-Space/ucanto/commit/25abb679a05b1f4010cdb949c71537ca2611d9c7))
+
+
+### Bug Fixes
+
+* build types before publishing ([#71](https://github.com/Le-Space/ucanto/issues/71)) ([04b7958](https://github.com/Le-Space/ucanto/commit/04b79588f77dba234aaf628f62f574b124bd540b))
+* car imports ([#262](https://github.com/Le-Space/ucanto/issues/262)) ([d3a7f91](https://github.com/Le-Space/ucanto/commit/d3a7f91e80c5885451014b6a85594d180f17125c))
+* default fetch implementation called on non Window object ([#88](https://github.com/Le-Space/ucanto/issues/88)) ([66a22ee](https://github.com/Le-Space/ucanto/commit/66a22eeb749e4f8091e5bfe832af36deb4dfff2e))
+* do not use frozen object for headers ([#334](https://github.com/Le-Space/ucanto/issues/334)) ([1abd266](https://github.com/Le-Space/ucanto/commit/1abd26646508c5e21f886dcb96bc0d36b4c0e458))
+* do not use frozen request headers ([#336](https://github.com/Le-Space/ucanto/issues/336)) ([fcdac7b](https://github.com/Le-Space/ucanto/commit/fcdac7b212c56b27080a7ecea09185eeac03655f))
+* downgrade versions ([#158](https://github.com/Le-Space/ucanto/issues/158)) ([f814e75](https://github.com/Le-Space/ucanto/commit/f814e75a89d3ed7c3488a8cb7af8d94f0cfba440))
+* export legacy request/response ([#294](https://github.com/Le-Space/ucanto/issues/294)) ([429c15b](https://github.com/Le-Space/ucanto/commit/429c15b6e5dd5fda6c15a94514d6690bc9ac058b))
+* FetchResponse type ([#113](https://github.com/Le-Space/ucanto/issues/113)) ([9397eb6](https://github.com/Le-Space/ucanto/commit/9397eb6449d0e2ba30c0da7402f3beda4980ed73))
+* message tag to 7.0.0 ([#282](https://github.com/Le-Space/ucanto/issues/282)) ([6ef3dcc](https://github.com/Le-Space/ucanto/commit/6ef3dcc1d45b65a7d932fd542c96721b0feea4c8))
+* optional field validation ([#124](https://github.com/Le-Space/ucanto/issues/124)) ([87b70d2](https://github.com/Le-Space/ucanto/commit/87b70d2d56c07f8257717fa5ef584a21eb0417c8))
+* reconfigure release-please ([#230](https://github.com/Le-Space/ucanto/issues/230)) ([c16e100](https://github.com/Le-Space/ucanto/commit/c16e10004a5d9f3071f9bfe833e3888851fe4202))
+* trigger interface upgrade for all packages ([#349](https://github.com/Le-Space/ucanto/issues/349)) ([255f0c1](https://github.com/Le-Space/ucanto/commit/255f0c1a7779ae9356e8f889e22b491a9789d334))
+* trigger releases ([a0d9291](https://github.com/Le-Space/ucanto/commit/a0d9291f9e20456e115fa6c7890cafe937fa511e))
+* type exports ([#280](https://github.com/Le-Space/ucanto/issues/280)) ([38c1745](https://github.com/Le-Space/ucanto/commit/38c1745ed7b8da9d0106ec0fea00b9b8e8225bc7))
+* update @ipld/car and @ipld/dag-cbor deps ([#120](https://github.com/Le-Space/ucanto/issues/120)) ([5dcd7a5](https://github.com/Le-Space/ucanto/commit/5dcd7a5788dfd126f332b126f7ad1215972f29c4))
+
+
+### Miscellaneous Chores
+
+* release 0.0.1-beta ([d6c7e73](https://github.com/Le-Space/ucanto/commit/d6c7e73de56278e2f2c92c4a0e1a2709c92bcbf9))
+* release 0.7.0 ([b3a441d](https://github.com/Le-Space/ucanto/commit/b3a441d4f3d85ab5ae3e2a0331dfacbdd038be23))
+* release 4.0.2 ([e9e35df](https://github.com/Le-Space/ucanto/commit/e9e35dffeeb7e5b5e19627f791b66bbdd35d2d11))
+* release 4.2.2 ([b92c345](https://github.com/Le-Space/ucanto/commit/b92c3455e0c34f2fc566d00422c19d11c03626f5))
+* release 4.2.2 ([fdb5326](https://github.com/Le-Space/ucanto/commit/fdb53260ae2f54cdb8fd9973be5386b36c3af4d0))
+* release 4.2.3 ([5dc8158](https://github.com/Le-Space/ucanto/commit/5dc8158341cd668304c94a4b83e1d9b9affae410))
+* release 4.3.0 ([b53bf3d](https://github.com/Le-Space/ucanto/commit/b53bf3d9fb582006598aa02ae4c534dfcc68c189))
+* release 4.3.1 ([5c76285](https://github.com/Le-Space/ucanto/commit/5c762859c53de307486a8cf5f7c517b24a66d0f4))
+* release 4.3.3 ([12ea70b](https://github.com/Le-Space/ucanto/commit/12ea70bbb06d43f7b98017e229f1e1af0dc2fa50))
+* release 4.3.4 ([baad652](https://github.com/Le-Space/ucanto/commit/baad652ff7d9760d58bbada161b293e653e6d20e))
+* release 4.4.0 ([e47dbfc](https://github.com/Le-Space/ucanto/commit/e47dbfc04b8caa2e3024c960c556251fc5fd9df7))
+* release 5.0.0 ([1f809a9](https://github.com/Le-Space/ucanto/commit/1f809a9d41494756e155ffb951864a8b26673642))
+* release 7.0.0 ([84e5c48](https://github.com/Le-Space/ucanto/commit/84e5c48141abd9555acc3adc910b00caff36ac44))
+* release 9.0.0 ([303cc44](https://github.com/Le-Space/ucanto/commit/303cc4429dfb6058ef152eacc50ca146d3546743))
+
 ## [9.3.0](https://github.com/Le-Space/ucanto/compare/transport-v9.2.0...transport-v9.3.0) (2025-01-15)
 
 ### Changed
